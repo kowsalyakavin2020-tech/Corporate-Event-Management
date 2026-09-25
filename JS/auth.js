@@ -28,6 +28,10 @@
     return re.test(trimmed) && /@gmail\.com$/i.test(trimmed);
   }
 
+  function isAlphabeticName(value) {
+    return /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/.test(String(value || "").trim());
+  }
+
   function showToast(message, isError) {
     toast.textContent = message;
     toast.classList.toggle("toast-error", !!isError);
@@ -177,6 +181,8 @@
     if (name === "name") {
       if (!value) {
         valid = false; message = "Full name is required.";
+      } else if (!isAlphabeticName(value)) {
+        valid = false; message = "Use letters only for your full name.";
       } else if (value.length < 2) {
         valid = false; message = "Name must be at least 2 characters.";
       }

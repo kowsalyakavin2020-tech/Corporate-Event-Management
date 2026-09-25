@@ -389,7 +389,10 @@ function switchView(key, label) {
   }
 
   const renderer = VIEWS[role][key];
-  document.getElementById('dashBody').innerHTML = renderer ? renderer() : '<p>No content available.</p>';
+  const body = document.getElementById('dashBody');
+  body.innerHTML = renderer ? renderer() : '<p>No content available.</p>';
+  body.scrollTop = 0;
+  window.scrollTo(0, 0);
   animateDashVisuals();
 
   document.querySelectorAll('[data-nav]').forEach(link => {

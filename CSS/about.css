@@ -1604,7 +1604,7 @@ ul {
   border-radius: 50%;
   overflow: hidden;
   backface-visibility: hidden;
-  transition: transform 0.8s var(--ease-out);
+  transition: transform 1.6s var(--ease-out);
 }
 .rt-front {
   transform: rotateY(0);
@@ -1619,10 +1619,10 @@ ul {
   object-fit: cover;
 }
 .rt-core.is-open .rt-front {
-  transform: rotateY(-82deg);
+  transform: rotateY(360deg);
 }
 .rt-core.is-open .rt-under {
-  transform: rotateY(262deg);
+  transform: rotateY(540deg);
 }
 .rt-pin {
   position: absolute;
@@ -2682,7 +2682,7 @@ ul {
   vertical-align: middle;
 }
 .cb-btn {
-  align-self: center;
+  align-self: flex-start;
 }
 .cb-note {
   flex-basis: 100%;

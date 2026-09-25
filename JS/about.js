@@ -249,15 +249,23 @@
       royal.classList.add('is-live');
     }
     if (core) {
-      core.addEventListener('pointerenter', function () { core.classList.add('is-open'); royal.classList.add('is-repel'); });
-      core.addEventListener('pointerleave', function () {
+      var closeTimer = null;
+      var closeCore = function () {
+        if (closeTimer) {
+          window.clearTimeout(closeTimer);
+          closeTimer = null;
+        }
         core.classList.remove('is-open');
         royal.classList.remove('is-repel');
+      };
+      core.addEventListener('pointerenter', function () {
+        core.classList.add('is-open');
+        royal.classList.add('is-repel');
+        if (closeTimer) { window.clearTimeout(closeTimer); }
+        closeTimer = window.setTimeout(closeCore, 2000);
       });
-      core.addEventListener('click', function () {
-        var open = core.classList.toggle('is-open');
-        royal.classList.toggle('is-repel', open);
-      });
+      core.addEventListener('pointerleave', closeCore);
+      core.addEventListener('pointercancel', closeCore);
     }
   }(rtRoyal, rtCore);
 
@@ -458,6 +466,18 @@
   function validateEmail(v) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
   }
+  function isAlphabeticName(v) {
+    return /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/.test(v);
+  }
+  function todayValue() {
+    var today = new Date();
+    var month = String(today.getMonth() + 1).padStart(2, '0');
+    var day = String(today.getDate()).padStart(2, '0');
+    return today.getFullYear() + '-' + month + '-' + day;
+  }
+  function isUpcomingDate(v) {
+    return /^\d{4}-\d{2}-\d{2}$/.test(v) && v >= todayValue();
+  }
   function setNote(note, msg, isError) {
     note.textContent = msg;
     note.classList.toggle('is-error', !!isError);
@@ -468,12 +488,14 @@
   var cbForm = $('#cbForm');
   if (cbForm) {
     var cbFields = [
-      { name: 'name', msg: 'Please fill in your name.', notEmpty: true },
-      { name: 'email', msg: 'Please fill in your email.', test: function (v) { return validateEmail(v); }, msgInvalid: 'Enter a valid email address.' },
-      { name: 'date', msg: 'Please fill in the event date.', notEmpty: true },
-      { name: 'city', msg: 'Please fill in the city.', notEmpty: true },
-      { name: 'shape', msg: 'Please fill in the shape of the night.', notEmpty: true }
+      { name: 'name', msg: 'Please fill in your name.', test: isAlphabeticName, msgInvalid: 'Use letters only for your name.' },
+      { name: 'email', msg: 'Please fill in your email.', test: validateEmail, msgInvalid: 'Enter a valid email address.' },
+      { name: 'date', msg: 'Please fill in the event date.', test: isUpcomingDate, msgInvalid: 'Choose today or a later date.' },
+      { name: 'city', msg: 'Please fill in the city.', test: isAlphabeticName, msgInvalid: 'Use letters only for the city.' },
+      { name: 'shape', msg: 'Please fill in the shape of the night.', test: function (v) { return v.length >= 3; }, msgInvalid: 'Add a little more detail about the shape of the night.' }
     ];
+    var cbDate = cbForm.querySelector('[name="date"]');
+    if (cbDate) { cbDate.min = todayValue(); }
     function setFieldError(f, errEl, msg) {
       if (msg) {
         errEl.textContent = msg;
@@ -485,40 +507,31 @@
         f.classList.remove('is-invalid');
       }
     }
+    function validateCbField(rule) {
+      var f = cbForm.querySelector('[name="' + rule.name + '"]');
+      var errEl = document.getElementById('cbErr' + rule.name.charAt(0).toUpperCase() + rule.name.slice(1));
+      if (!f || !errEl) { return null; }
+      var v = f.value.trim();
+      var msg = !v ? rule.msg : rule.test && !rule.test(v) ? rule.msgInvalid : null;
+      setFieldError(f, errEl, msg);
+      return msg ? f : null;
+    }
     function cbValidate() {
-      var allOk = true;
       var firstBad = null;
       cbFields.forEach(function (rule) {
-        var f = cbForm.querySelector('[name="' + rule.name + '"]');
-        var errEl = document.getElementById('cbErr' + rule.name.charAt(0).toUpperCase() + rule.name.slice(1));
-        if (!f || !errEl) { return; }
-        var v = f.value.trim();
-        var bad = rule.notEmpty ? v.length === 0 : false;
-        if (!bad && rule.test) {
-          bad = !rule.test(v);
-          setFieldError(f, errEl, bad ? rule.msgInvalid : null);
-        } else {
-          setFieldError(f, errEl, bad ? rule.msg : null);
-        }
-        if (bad) { allOk = false; firstBad = firstBad || f; }
+        var bad = validateCbField(rule);
+        if (!firstBad && bad) { firstBad = bad; }
       });
-      return { allOk: allOk, firstBad: firstBad };
+      return { allOk: !firstBad, firstBad: firstBad };
     }
     cbFields.forEach(function (rule) {
       var f = cbForm.querySelector('[name="' + rule.name + '"]');
       if (!f) { return; }
-      var errEl = document.getElementById('cbErr' + rule.name.charAt(0).toUpperCase() + rule.name.slice(1));
       f.addEventListener('blur', function () {
-        var v = f.value.trim();
-        var bad = rule.notEmpty ? v.length === 0 : false;
-        if (!bad && rule.test) { bad = !rule.test(v); }
-        setFieldError(f, errEl, bad ? (rule.test && !rule.notEmpty ? rule.msgInvalid : rule.msg) : null);
+        validateCbField(rule);
       });
       f.addEventListener('input', function () {
-        var v = f.value.trim();
-        var bad = rule.notEmpty ? v.length === 0 : false;
-        if (!bad && rule.test) { bad = !rule.test(v); }
-        if (!bad) { setFieldError(f, errEl, null); }
+        if (f.classList.contains('is-invalid')) { validateCbField(rule); }
       });
     });
     cbForm.addEventListener('submit', function (e) {

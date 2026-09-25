@@ -537,7 +537,6 @@
           ></iframe>
         </div>
 
-        <span class="ct-map-pin" id="ctMapPin" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
       </div>
     </section>
 
@@ -575,28 +574,31 @@
             <label for="ctName">Your name</label>
             <input type="text" id="ctName" name="name" placeholder="Fiona Arden" autocomplete="name" />
             <span class="ct-field-line" aria-hidden="true"></span>
-            <span class="ct-field-msg">Please tell us your name.</span>
+            <span class="ct-field-msg"><span class="ct-field-error-text"></span></span>
           </div>
 
           <div class="ct-field" data-field="email">
             <label for="ctEmail">Work email</label>
             <input type="email" id="ctEmail" name="email" placeholder="you@company.com" autocomplete="email" />
             <span class="ct-field-line" aria-hidden="true"></span>
-            <span class="ct-field-msg">Enter a valid work email (e.g. you@company.com).</span>
+            <span class="ct-field-msg">
+              <span class="ct-field-error-text"></span>
+              <span class="ct-field-example">(Example: you@company.com)</span>
+            </span>
           </div>
 
           <div class="ct-field" data-field="date">
             <label for="ctDate">The date of the night</label>
-            <input type="text" id="ctDate" name="date" placeholder="e.g. 14 March 2027" />
+            <input type="date" id="ctDate" name="date" aria-label="The date of the night" />
             <span class="ct-field-line" aria-hidden="true"></span>
-            <span class="ct-field-msg">Pick the date of the night.</span>
+            <span class="ct-field-msg"><span class="ct-field-error-text"></span></span>
           </div>
 
           <div class="ct-field" data-field="shape">
             <label for="ctShape">The shape of the room</label>
             <textarea id="ctShape" name="shape" rows="4" placeholder="Six hundred people, one keynote, a catering hold downstairs than none of us trust yet."></textarea>
             <span class="ct-field-line" aria-hidden="true"></span>
-            <span class="ct-field-msg">A room takes at least a sentence &mdash; twelve characters.</span>
+            <span class="ct-field-msg"><span class="ct-field-error-text"></span></span>
           </div>
 
           <button type="submit" class="btn btn-gold stripes-btn ct-letter-btn">

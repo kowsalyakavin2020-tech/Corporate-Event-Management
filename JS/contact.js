@@ -709,10 +709,49 @@ gsap.utils.toArray(".ct-map-frame").forEach((mf) => {
     }
   }
 
-const fieldRules = {
-    name: (v) => v.trim().length > 0,
+  function getTodayValue() {
+    const today = new Date();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    return today.getFullYear() + "-" + month + "-" + day;
+  }
+
+  function isAlphabeticName(v) {
+    return /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/.test(v.trim());
+  }
+
+  function isUpcomingDate(v) {
+    return /^\d{4}-\d{2}-\d{2}$/.test(v.trim()) && v.trim() >= getTodayValue();
+  }
+
+  const letterDate = document.getElementById("ctDate");
+  if (letterDate) {
+    letterDate.min = getTodayValue();
+  }
+
+  const fieldMessages = {
+    name: {
+      required: "Please spell your name",
+      invalid: "Use letters only for your name",
+    },
+    email: {
+      required: "Enter a valid work email",
+      invalid: "Enter a valid work email",
+    },
+    date: {
+      required: "Pick the date of the night",
+      invalid: "Choose today or a later date",
+    },
+    shape: {
+      required: "A room takes at least a sentence, 12 characters",
+      invalid: "Use at least 12 characters.",
+    },
+  };
+
+  const fieldRules = {
+    name: isAlphabeticName,
     email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
-    date: (v) => v.trim().length > 0,
+    date: isUpcomingDate,
     shape: (v) => v.trim().length >= 12,
   };
 
@@ -720,20 +759,28 @@ const fieldRules = {
     const field = wrap.getAttribute("data-field");
     const input = wrap.querySelector("input, textarea");
     const rule = fieldRules[field];
-    const good = rule ? rule(input.value) : true;
-    wrap.classList.toggle("ct-field-error", !good);
-    return good;
+    const value = input.value.trim();
+    const good = rule ? rule(value) : true;
+    const messages = fieldMessages[field] || { required: "", invalid: "" };
+    const message = !value ? messages.required : good ? "" : messages.invalid;
+    const messageEl = wrap.querySelector(".ct-field-error-text");
+    if (messageEl) messageEl.textContent = message;
+    const exampleEl = wrap.querySelector(".ct-field-example");
+    if (exampleEl) exampleEl.classList.toggle("is-visible", Boolean(message));
+    wrap.classList.toggle("ct-field-error", Boolean(message));
+    return !message;
   }
 
   document.querySelectorAll("[data-field]").forEach((fieldWrap) => {
     const input = fieldWrap.querySelector("input, textarea");
     if (!input) return;
     input.addEventListener("input", () => {
-      fieldWrap.classList.remove("ct-field-error");
+      if (fieldWrap.classList.contains("ct-field-error")) {
+        validateField(fieldWrap);
+      }
     });
     input.addEventListener("blur", () => {
-      if (input.value.trim()) fieldWrap.classList.remove("ct-field-error");
-      else validateField(fieldWrap);
+      validateField(fieldWrap);
     });
     input.addEventListener("focus", () => {
       setFieldReactive(fieldWrap.getAttribute("data-field"));

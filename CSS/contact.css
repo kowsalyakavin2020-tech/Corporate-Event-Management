@@ -2435,34 +2435,6 @@ ul {
   to { transform: translateY(-50%) rotate(1turn); }
 }
 
-.ct-map-pin {
-  position: absolute;
-  top: 44%;
-  left: 52%;
-  z-index: 3;
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  background: radial-gradient(circle at 32% 28%, var(--gold-2), var(--gold-3) 72%);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
-  animation: ctPinDrop 2.6s var(--ease-back);
-}
-
-.ct-map-pin i {
-  transform: rotate(45deg);
-  color: var(--ink);
-  font-size: 0.9rem;
-}
-
-@keyframes ctPinDrop {
-  0% { opacity: 0; top: -30px; }
-  60% { opacity: 1; top: 49%; }
-  80% { top: 41%; }
-  100% { top: 44%; }
-}
 
 /* ===================== SECTION 9 - THE LETTER (CONTACT FORM) ===================== */
 .ct-letter {
@@ -2615,12 +2587,18 @@ ul {
   font-size: 1rem;
   color: var(--cream);
   background: transparent;
+  background-color: transparent !important;
   border: none;
   border-bottom: 1px solid var(--line);
   padding: 0.6rem 0 0.75rem;
   outline: none;
   resize: vertical;
   transition: border-color 0.3s;
+}
+
+.ct-field input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+  opacity: 1;
 }
 
 .ct-field textarea {
@@ -2652,11 +2630,32 @@ ul {
   border-color: transparent;
 }
 
+.ct-field input:-webkit-autofill,
+.ct-field input:-webkit-autofill:hover,
+.ct-field input:-webkit-autofill:focus,
+.ct-field textarea:-webkit-autofill,
+.ct-field textarea:-webkit-autofill:hover,
+.ct-field textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--cream);
+  -webkit-box-shadow: 0 0 0 1000px var(--surface) inset;
+  background-color: transparent !important;
+}
+
+.ct-field.ct-field-error input:-webkit-autofill,
+.ct-field.ct-field-error input:-webkit-autofill:hover,
+.ct-field.ct-field-error input:-webkit-autofill:focus,
+.ct-field.ct-field-error textarea:-webkit-autofill,
+.ct-field.ct-field-error textarea:-webkit-autofill:hover,
+.ct-field.ct-field-error textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgba(216, 112, 112, 0.05) inset;
+}
+
 .ct-field.ct-field-error input,
 .ct-field.ct-field-error textarea,
 .ct-field.ct-field-error .ct-field-line {
   border-color: #d87070;
   background: rgba(216, 112, 112, 0.05);
+  background-color: rgba(216, 112, 112, 0.05) !important;
 }
 
 .ct-field-error .ct-field-line {
@@ -2674,8 +2673,21 @@ ul {
   transition: max-height 0.35s var(--ease-out), opacity 0.35s, margin 0.35s;
 }
 
+.ct-field-error-text {
+  display: block;
+}
+
+.ct-field-example {
+  display: none;
+  margin-top: 0.2rem;
+}
+
+.ct-field-example.is-visible {
+  display: block;
+}
+
 .ct-field.ct-field-error .ct-field-msg {
-  max-height: 2.2em;
+  max-height: 4em;
   opacity: 1;
   margin-top: 0.4rem;
 }
@@ -3173,9 +3185,6 @@ ul {
     height: 320px;
   }
 
-  .ct-map-pin {
-    top: 40%;
-  }
 
   .ct-relay-track {
     grid-template-columns: 1fr;
