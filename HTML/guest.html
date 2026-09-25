@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guest Dashboard — Corporate Event Management</title>
+<link rel="icon" href="../images/logo-icon.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+<body>
+
+<div id="loader">
+  <img src="../images/logo-full.webp" alt="">
+  <div class="loader-ring"></div>
+  <p>Loading your dashboard…</p>
+</div>
+
+<div class="dash-overlay" id="dashOverlay"></div>
+
+<div class="dash-shell">
+  <aside class="dash-sidebar" id="dashSidebar">
+    <div class="dash-logo">
+      <a href="guest.html"><img src="../images/logo-full.webp" alt="Corporate Event Management"></a>
+      <i class="fa-solid fa-xmark dash-sidebar-close" id="dashSidebarClose"></i>
+    </div>
+    <div class="dash-role-badge" id="dashRoleBadge">Guest</div>
+    <nav class="dash-nav" id="dashNav"></nav>
+
+    <div class="dash-sidebar-user">
+      <div class="dash-user-avatar" id="dashSidebarAvatar">S</div>
+      <div><strong id="dashSidebarName">—</strong><span id="dashSidebarEmail">—</span></div>
+    </div>
+
+    <div class="dash-logout">
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="dash-header">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <i class="fa-solid fa-bars dash-menu-toggle" id="dashMenuToggle"></i>
+        <div>
+          <h2 id="dashViewTitle">Overview</h2>
+          <p id="dashWelcomeMsg" class="dash-welcome-msg"></p>
+        </div>
+      </div>
+      <div class="dash-header-search-wrap">
+        <div class="dash-header-search" id="dashHeaderSearch">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="dashSearchInput" placeholder="Search events, organizers, circles…">
+        </div>
+      </div>
+      <div class="dash-header-right">
+        <a href="404.html"><i class="fa-solid fa-bell dash-bell"></i></a>
+        <div class="dash-user" id="dashUserBlock">
+          <div class="dash-user-avatar" id="dashAvatarInitial">S</div>
+          <div class="dash-user-info"><strong id="dashUserName">—</strong><span id="dashUserEmail">—</span></div>
+        </div>
+      </div>
+    </header>
+    <div class="dash-body" id="dashBody"></div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toastStack"></div>
+
+<script>
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  setTimeout(() => loader.classList.add('hide'), 700);
+});
+function showToast(message, icon = 'circle-check') {
+  const stack = document.getElementById('toastStack');
+  if (!stack) return;
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `<i class="fa-solid fa-${icon}"></i> ${message}`;
+  stack.appendChild(toast);
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(10px)';
+    toast.style.transition = 'all .3s ease';
+    setTimeout(() => toast.remove(), 300);
+  }, 3200);
+}
+</script>
+<script>window.DASHBOARD_ROLE = 'guest';</script>
+<script src="../JS/dashboard.js"></script>
+</body>
+</html>

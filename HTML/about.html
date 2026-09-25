@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Stackly Corporate Event Management</title>
+  <meta name="description" content="Stackly is a corporate event management studio. About the studio — the index of rooms, the round table, the chapters, the revision and the proof." />
+  <link rel="icon" href="../images/logo-icon.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="../CSS/about.css" />
+
+  <link rel="stylesheet" href="../CSS/preloader.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-inner">
+      <img class="pl-logo" src="../images/logo-full.webp" alt="Stackly" />
+      <div class="pl-icons">
+        <i class="fa-solid fa-sun pl-icon"></i>
+        <i class="fa-solid fa-moon pl-icon"></i>
+        <i class="fa-solid fa-gears pl-icon"></i>
+        <i class="fa-solid fa-crown pl-icon"></i>
+        <i class="fa-solid fa-award pl-icon"></i>
+      </div>
+      <div class="pl-loader"><span></span></div>
+      <p class="pl-loading">Loading</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== SECTION 1 — HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="brand" id="brandHome" aria-label="Stackly home">
+        <img src="../images/logo-full.webp" alt="Stackly" class="brand-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../index.html" class="nav-link" data-wave>Home</a>
+        <a href="services.html" class="nav-link" data-wave>Services</a>
+        <a href="events.html" class="nav-link" data-wave>Event</a>
+        <a href="about.html" class="nav-link is-active" data-wave>About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="login.html" class="btn btn-gold header-cta stripes-btn">
+        <span class="btn-label">Login</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE FULLSCREEN MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-head">
+      <a href="../index.html" aria-label="Stackly home"><img src="../images/logo-full.webp" alt="Stackly" class="mm-logo" /></a>
+      <button class="mm-close" id="mmClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mm-nav" aria-label="Mobile">
+      <a href="../index.html" class="mm-link"><span class="mm-num">01</span><span class="mm-label">Home</span></a>
+      <a href="services.html" class="mm-link"><span class="mm-num">02</span><span class="mm-label">Services</span></a>
+      <a href="events.html" class="mm-link"><span class="mm-num">03</span><span class="mm-label">Event</span></a>
+      <a href="about.html" class="mm-link is-active"><span class="mm-num">04</span><span class="mm-label">About</span></a>
+      <a href="contact.html" class="mm-link"><span class="mm-num">05</span><span class="mm-label">Contact</span></a>
+      <a href="login.html" class="mm-link mm-login">
+        <span class="mm-num"><i class="fa-solid fa-right-to-bracket"></i></span>
+        <span class="mm-label">Login</span>
+      </a>
+    </nav>
+    <div class="mm-foot">
+      <div class="mm-socials">
+        <a href="#" class="mm-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="mm-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="mm-soc" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="mm-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <p class="mm-contact"><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===================== SECTION 2 — HERO (SPLIT SCREEN DUEL) ===================== -->
+    <section class="hd-hero" id="home">
+      <div class="hd-shell">
+        <div class="hd-left">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>Stackly &middot; The Studio</span>
+          </div>
+          <h1 class="hd-title">
+            <span class="hd-line"><span class="hd-m">Rooms that</span></span>
+            <span class="hd-line is-gold"><span class="hd-m">are <em>written,</em></span></span>
+            <span class="hd-line"><span class="hd-m">never rented.</span></span>
+          </h1>
+          <p class="hd-sub">
+            A corporate event studio of producers, lighters, florists and stage
+            managers. We script the hour, not just the floor plan.
+          </p>
+          <div class="hd-stats">
+            <div class="hd-stat"><b data-count="60" data-suffix="">0</b><span>producers</span></div>
+            <div class="hd-stat"><b data-count="9" data-suffix="">0</b><span>cities</span></div>
+            <div class="hd-stat"><b data-count="340" data-suffix="+">0</b><span>rooms written</span></div>
+          </div>
+        </div>
+
+        <div class="hd-right">
+          <div class="hd-frame">
+            <span class="hd-vseam" aria-hidden="true"></span>
+            <figure class="hd-img" id="hdImg">
+              <img src="../images/chandelier-lit-gala-hall.webp" alt="Chandelier-lit hall before the room was written" />
+            </figure>
+            <span class="hd-measure" aria-hidden="true"></span>
+            <div class="hd-seal" aria-hidden="true"><span>est&nbsp;&middot;&nbsp;2016</span><b>STACKLY</b></div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+    <!-- ===================== SECTION 3 — THE INDEX (REACTIVE ROSTER) ===================== -->
+    <section class="dx-section" id="index">
+      <div class="container">
+        <div class="dx-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Index</span>
+          </div>
+          <h2 class="dx-title">Five rooms, <em>one ledger</em></h2>
+          <p class="dx-lead">Scroll or float the pointer. The porthole behind steps with you, and every room stays alive in the grid.</p>
+        </div>
+
+        <div class="dx-grid">
+          <div class="dx-list" id="dxList">
+            <article class="dx-row" data-dx="0" tabindex="0">
+              <span class="dx-no">01</span>
+              <div class="dx-txt"><h3>The Glass House</h3><p>Seattle &middot; 2017 &middot; 14-city credit-union rollout</p></div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </article>
+            <article class="dx-row" data-dx="1" tabindex="0">
+              <span class="dx-no">02</span>
+              <div class="dx-txt"><h3>The Reveal</h3><p>Dubai &middot; 2018 &middot; product launch on a shipping crate</p></div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </article>
+            <article class="dx-row" data-dx="2" tabindex="0">
+              <span class="dx-no">03</span>
+              <div class="dx-txt"><h3>The Pivot</h3><p>Lisbon &middot; 2020 &middot; a board week turned letter-perfect</p></div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </article>
+            <article class="dx-row" data-dx="3" tabindex="0">
+              <span class="dx-no">04</span>
+              <div class="dx-txt"><h3>The Stadium Space</h3><p>Riyadh &middot; 2022 &middot; one stage, 700 heads</p></div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </article>
+            <article class="dx-row" data-dx="4" tabindex="0">
+              <span class="dx-no">05</span>
+              <div class="dx-txt"><h3>The Hold</h3><p>Seattle &middot; 2024 &middot; the season that never repeated</p></div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </article>
+          </div>
+
+          <div class="dx-stage" id="dxStage">
+            <figure class="dx-img" id="dxImg">
+              <img src="../images/partnership-handshake-deal.webp" alt="The Glass House" class="is-live" data-dximg="0" />
+              <img src="../images/product-launch-stage-audience.webp" alt="The Reveal" data-dximg="1" />
+              <img src="../images/illuminated-conference-stage.webp" alt="The Pivot" data-dximg="2" />
+              <img src="../images/concert-stage-spotlights-crowd.webp" alt="The Stadium Space" data-dximg="3" />
+              <img src="../images/rooftop-evening-gathering.webp" alt="The Hold" data-dximg="4" />
+            </figure>
+            <span class="dx-chip" id="dxChip">now viewing &mdash; The Glass House</span>
+          </div>
+        </div>
+      </div>
+    </section><!-- ===================== SECTION 4 — ROUND TABLE (RADIAL BROTAB) ===================== -->
+    <section class="rt-section" id="table">
+      <div class="container">
+        <div class="rt-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Round Table</span>
+          </div>
+          <h2 class="rt-title">Four chairs, <em>one table</em></h2>
+          <p class="rt-lead">Every brief orbits a single decision point. Drag nothing &mdash; just watch the room assemble itself around the middle.</p>
+        </div>
+
+        <div class="rt-royal" id="rtRoyal">
+          <div class="rt-orbit rt-orbit-1" aria-hidden="true"></div>
+          <div class="rt-orbit rt-orbit-2" aria-hidden="true"></div>
+          <div class="rt-orbit rt-orbit-3" aria-hidden="true"></div>
+
+          <figure class="rt-sat rt-sat-1">
+            <img src="../images/florist-decorating-floral-arch.webp" alt="Florist builds the arch" />
+            <figcaption>Floristry</figcaption>
+          </figure>
+
+          <figure class="rt-sat rt-sat-2">
+            <img src="../images/dynamic-keynote-moment.webp" alt="Keynote moment" />
+            <figcaption>Stage</figcaption>
+          </figure>
+
+          <figure class="rt-sat rt-sat-3">
+            <img src="../images/tent-string-lights-night-event.webp" alt="Tented night event" />
+            <figcaption>Venue</figcaption>
+          </figure>
+
+          <figure class="rt-sat rt-sat-4">
+            <img src="../images/opulent-dinner-gathering.webp" alt="Dinner gathering" />
+            <figcaption>Catering</figcaption>
+          </figure>
+
+          <div class="rt-core" id="rtCore">
+            <figure class="rt-front" id="rtFront">
+              <img src="../images/city-rooftop-party-dusk.webp" alt="The table as everyone knows it" />
+            </figure>
+            <figure class="rt-under" id="rtUnder">
+              <img src="../images/event-crew-team-celebration.webp" alt="The table as the crew sees it" />
+            </figure>
+            <span class="rt-pin rt-pin-a" aria-hidden="true"></span>
+            <span class="rt-pin rt-pin-b" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="rt-note">
+          <span class="rt-label">the centre</span>
+          <p>The four of us sit in it. The room you see is after us &mdash; the room before is above.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 5 — DOUBLE MARQUEE (KINETIC TICKER) ===================== -->
+    <section class="mq-section" id="marquee">
+      <div class="container">
+        <div class="mq-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Ticker</span>
+          </div>
+          <h2 class="mq-title">Two tapes, <em>one truth</em></h2>
+          <p class="mq-lead">The same room, told twice. The frame breathes on its own, and any word on the tapes tells it a new story.</p>
+        </div>
+
+        <div class="mq-stage" id="mqStage">
+          <div class="mq-frame" id="mqFrame">
+            <img src="../images/conference-keynote-speaker.webp" alt="A room we built" data-mqimg="0" class="is-on" />
+            <img src="../images/elegant-wedding-planning.webp" alt="The room as planned" data-mqimg="1" />
+            <img src="../images/evening-rooftop-party.webp" alt="The room as remembered" data-mqimg="2" />
+          </div>
+        </div>
+
+        <div class="mq-tapes">
+          <div class="mq-row mq-row-top">
+            <div class="mq-seg" id="mqTop">
+              <span class="mq-word" data-mq="0">The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i></span>
+              <span class="mq-word" data-mq="1">The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i></span>
+              <span class="mq-word" data-mq="2">The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i></span>
+            </div>
+          </div>
+          <div class="mq-row mq-row-bot">
+            <div class="mq-seg" id="mqBot">
+              <span class="mq-word" data-mq="2">The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i> The afterglow <i class="mq-star fa-solid fa-star"></i></span>
+              <span class="mq-word" data-mq="1">The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i> The hidden dinner <i class="mq-star fa-solid fa-star"></i></span>
+              <span class="mq-word" data-mq="0">The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i> The keynote <i class="mq-star fa-solid fa-star"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 6 — VERTICAL COVERFLOW (CHAPTERS) ===================== -->
+    <section class="vs-section" id="chapters">
+      <div class="container">
+        <div class="vs-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Chapters</span>
+          </div>
+          <h2 class="vs-title">The day, <em>read vertically</em></h2>
+          <p class="vs-lead">A single event, four chapters. Scroll and the card nearest you sits up straight; the rest lean out of the stack.</p>
+        </div>
+
+        <div class="vs-track" id="vsTrack">
+          <article class="vs-card is-active" data-vs="0">
+            <figure class="vs-media"><img src="../images/stage-setup-crew-day.webp" alt="Load-in and rig" /></figure>
+            <div class="vs-copy">
+              <span class="vs-no">Chapter 01</span>
+              <h3>Load-in, rig &amp; quiet terror</h3>
+              <p>Fourteen staff, one barcode sheet, an empty hall. Before the first guest there is only the checklist.</p>
+            </div>
+          </article>
+          <article class="vs-card" data-vs="1">
+            <figure class="vs-media"><img src="../images/elegant-dinner-setting.webp" alt="The service window" /></figure>
+            <div class="vs-copy">
+              <span class="vs-no">Chapter 02</span>
+              <h3>The service window</h3>
+              <p>Courses move in minutes, not on clocks. The floor manager reads the room the way a conductor reads rests.</p>
+            </div>
+          </article>
+          <article class="vs-card" data-vs="2">
+            <figure class="vs-media"><img src="../images/bonfire-night-gathering-crowd.webp" alt="The after hours" /></figure>
+            <div class="vs-copy">
+              <span class="vs-no">Chapter 03</span>
+              <h3>The after hours</h3>
+              <p>When the agenda is done the room keeps talking. We stay until the last delegate stops checking their phone.</p>
+            </div>
+          </article>
+          <article class="vs-card" data-vs="3">
+            <figure class="vs-media"><img src="../images/gleaming-victory-trophy.webp" alt="The debrief" /></figure>
+            <div class="vs-copy">
+              <span class="vs-no">Chapter 04</span>
+              <h3>The debrief</h3>
+              <p>Sunday morning, three screens, honest words. Every chapter of the next event starts here.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 7 — REVISION (COMPARE SLIDER) ===================== -->
+    <section class="rv-section" id="revision">
+      <div class="container">
+        <div class="rv-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Revision</span>
+          </div>
+          <h2 class="rv-title">The plan, <em>against the night</em></h2>
+          <p class="rv-lead">Drag the seam or just scroll. Left is the moodboard we started with; right is the room that actually opened.</p>
+        </div>
+
+        <div class="rv-wrap" id="rvSlider">
+          <figure class="rv-img rv-img-plan">
+            <img src="../images/moodboard-flatlay-planning-table.webp" alt="The plan, flat and honest" />
+            <span class="rv-tag">PLAN</span>
+          </figure>
+          <div class="rv-img rv-img-live">
+            <img src="../images/elegant-blue-gala.webp" alt="The room, finished" />
+            <span class="rv-tag">LIVE</span>
+          </div>
+          <div class="rv-seam" id="rvSeam">
+            <span class="rv-grip"><i class="fa-solid fa-left-right"></i></span>
+          </div>
+          <span class="rv-hint"><i class="fa-solid fa-arrows-left-right"></i> drag the night</span>
+          <span class="rv-tick rv-tick-a" aria-hidden="true"></span>
+          <span class="rv-tick rv-tick-b" aria-hidden="true"></span>
+        </div>
+
+        <div class="rv-note">
+          <p>Between those two frames sits what we actually sell &mdash; the distance you never have to walk yourself.</p>
+        </div>
+      </div>
+    </section><!-- ===================== SECTION 8 — VIGNETTES (THREE ROWS) ===================== -->
+    <section class="vg-section" id="vignettes">
+      <div class="container">
+        <div class="vg-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Vignettes</span>
+          </div>
+          <h2 class="vg-title">Small rooms, <em>big manners</em></h2>
+          <p class="vg-lead">Three of the details nobody is supposed to notice. Each one opens differently.</p>
+        </div>
+
+        <div class="vg-stack">
+          <article class="vg-row vg-row-1">
+            <div class="vg-copy">
+              <span class="vg-no">1</span>
+              <h3>The plate is a room</h3>
+              <p>A dinner plate is a floor plan of its own. Twenty-two thumbs vetoed a chef&rsquo;s napkin before we booked the menu.</p>
+            </div>
+            <div class="vg-img-box vg-img-box-1" id="vg1">
+              <figure class="vg-img vg-img-a"><img src="../images/chef-plating-dish.webp" alt="Plating amp up" /></figure>
+              <figure class="vg-img vg-img-b"><img src="../images/chef-plating-closeup-hands.webp" alt="Plating close-up" /></figure>
+              <span class="vg-frame" aria-hidden="true"></span>
+            </div>
+          </article>
+
+          <article class="vg-row vg-row-2">
+            <div class="vg-img-box vg-img-box-2" id="vg2">
+              <figure class="vg-img vg-img-a"><img src="../images/florist-arranging-blooms.webp" alt="The floral bench" /></figure>
+              <figure class="vg-img vg-img-b"><img src="../images/evening-garden-party-lights.webp" alt="The garden at night" /></figure>
+              <span class="vg-frame" aria-hidden="true"></span>
+            </div>
+            <div class="vg-copy">
+              <span class="vg-no">2</span>
+              <h3>The bench becomes a garden</h3>
+              <p>Floristry here is logistics that smells good. The arrangement is scheduled to the hour, not to the mood.</p>
+            </div>
+          </article>
+
+          <article class="vg-row vg-row-3">
+            <div class="vg-copy">
+              <span class="vg-no">3</span>
+              <h3>The scan of the seat</h3>
+              <p>One pass of a phone tags six hundred seats. The board lights up green, and the show can start early.</p>
+            </div>
+            <div class="vg-img-box vg-img-box-3" id="vg3">
+              <figure class="vg-img vg-img-a"><img src="../images/concert-stage-spotlights-crowd.webp" alt="A crowded hall mid-scan" /></figure>
+              <span class="vg-scan" aria-hidden="true"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 9 — THE SCORE (ODOMETER) ===================== -->
+    <section class="sc-section" id="score">
+      <div class="container">
+        <div class="sc-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Score</span>
+          </div>
+          <h2 class="sc-title">Numbers, <em>turned like wheels</em></h2>
+          <p class="sc-lead">We count the same things everyone counts &mdash; we just refuse to stop early.</p>
+        </div>
+
+        <div class="sc-board" id="scBoard">
+          <div class="sc-cell">
+            <div class="sc-num" data-count="640">0</div>
+            <span class="sc-label">events planned end-to-end</span>
+            <figure class="sc-thumb"><img src="../images/florist-holding-red-bouquet.webp" alt="One of the 640" /></figure>
+          </div>
+          <div class="sc-cell">
+            <div class="sc-num" data-count="9">0</div>
+            <span class="sc-label">cities with a standing crew</span>
+            <figure class="sc-thumb"><img src="../images/bonfire-silhouette-gathering.webp" alt="Crew nights" /></figure>
+          </div>
+          <div class="sc-cell">
+            <div class="sc-num" data-count="11">0</div>
+            <span class="sc-label">years without a missed walkthrough</span>
+            <figure class="sc-thumb"><img src="../images/modern-lobby-reception-marble.webp" alt="A lobby we rehearsed" /></figure>
+          </div>
+          <div class="sc-cell">
+            <div class="sc-num" data-count="340">0</div>
+            <span class="sc-label">rooms written, never twice</span>
+            <figure class="sc-thumb"><img src="../images/corporate-team-meeting.webp" alt="The team" /></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 10 — THE PROOF (TOMBSTONE TILES) ===================== -->
+    <section class="tp-section" id="proof">
+      <div class="container">
+        <div class="tp-head">
+          <div class="section-eyebrow" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Proof</span>
+          </div>
+          <h2 class="tp-title">Tiles that <em>turn over</em></h2>
+          <p class="tp-lead">Four tombstones. Hover one and it tips backward to show what someone actually said after the show we built.</p>
+        </div>
+
+        <div class="tp-grid" id="tpGrid">
+          <article class="tp-tile" tabindex="0">
+            <div class="tp-face">
+              <figure class="tp-photo"><img src="../images/woman-headshot-white-blazer.webp" alt="Head of Global Events" /></figure>
+              <h3>Elena Vasquez</h3>
+              <span>Head of Global Events, Meridian</span>
+            </div>
+            <div class="tp-back">
+              <p>&ldquo;We handed Stackly a six-word brief and they returned a room we had never imagined. I still don&rsquo;t know how.&rdquo;</p>
+              <span class="tp-meta">Hong Kong &middot; 2023</span>
+            </div>
+          </article>
+
+          <article class="tp-tile" tabindex="0">
+            <div class="tp-face">
+              <figure class="tp-photo"><img src="../images/man-headshot-gray-suit.webp" alt="COO" /></figure>
+              <h3>Rafael Moore</h3>
+              <span>COO, Northwind Logistics</span>
+            </div>
+            <div class="tp-back">
+              <p>&ldquo;Twelve hundred attendees, zero late starts, and my COO brain never once went loud. That is the whole review.&rdquo;</p>
+              <span class="tp-meta">Singapore &middot; 2024</span>
+            </div>
+          </article>
+
+          <article class="tp-tile" tabindex="0">
+            <div class="tp-face">
+              <figure class="tp-photo"><img src="../images/executive-signing-document-desk.webp" alt="Head of People" /></figure>
+              <h3>Priya Nair</h3>
+              <span>Head of People, Acrewise</span>
+            </div>
+            <div class="tp-back">
+              <p>&ldquo;The retreat felt less like an offsite and more like the fourth quarter our team had already earned. Ribbons on six roles.&rdquo;</p>
+              <span class="tp-meta">San Francisco &middot; 2022 &middot; on sheet 397</span>
+            </div>
+          </article>
+
+          <article class="tp-tile" tabindex="0">
+            <div class="tp-face">
+              <figure class="tp-photo"><img src="../images/festival-confetti-blast.webp" alt="Founder" /></figure>
+              <h3>Marcus Hale</h3>
+              <span>Founder, Tidal Labs</span>
+            </div>
+            <div class="tp-back">
+              <p>&ldquo;The launch dropped at nine and the room genuinely cheered. I have seen the tape a dozen times; the tape has not repeated.&rdquo;</p>
+              <span class="tp-meta">Amsterdam &middot; 2021 &middot; on sheet 214</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 11 — CLOSING BAND (CTA) ===================== -->
+    <section class="cb-section" id="join">
+      <div class="cb-bg" id="cbBg">
+        <img src="../images/evening-rooftop-party.webp" alt="A room we have not written yet" />
+      </div>
+      <div class="cb-veil" aria-hidden="true"></div>
+      <div class="container cb-inner">
+        <div class="section-eyebrow cb-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>Write the room with us</span>
+        </div>
+        <h2 class="cb-title" data-aos="fade-up">Tell us the date. <br /><em class="cb-emp">We&rsquo;ll write the hour.</em></h2>
+        <p class="cb-sub" data-aos="fade-up">One brief, one reply within a working day, and a room that was never rented.</p>
+        <form class="cb-form" id="cbForm" data-aos="fade-up" novalidate>
+          <div class="cb-field">
+            <input type="text" name="name" class="cb-input" placeholder="Your name" aria-label="Your name" required />
+            <span class="cb-err" id="cbErrName" role="alert"></span>
+          </div>
+          <div class="cb-field">
+            <input type="email" name="email" class="cb-input" placeholder="Work email" aria-label="Work email" required />
+            <span class="cb-err" id="cbErrEmail" role="alert"></span>
+          </div>
+          <div class="cb-field">
+            <input type="date" name="date" class="cb-input" placeholder="Event date" aria-label="Event date" required />
+            <span class="cb-err" id="cbErrDate" role="alert"></span>
+          </div>
+          <div class="cb-field">
+            <input type="text" name="city" class="cb-input" placeholder="City" aria-label="City" required />
+            <span class="cb-err" id="cbErrCity" role="alert"></span>
+          </div>
+          <div class="cb-field">
+            <input type="text" name="shape" class="cb-input" placeholder="The shape of the night" aria-label="Shape of the event" required />
+            <span class="cb-err" id="cbErrShape" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-gold stripes-btn cb-btn">
+            <span class="btn-label"><i class="fa-solid fa-envelope-open-text"></i> &nbsp;Request the sheet</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html"><img src="../images/logo-full.webp" alt="Stackly" class="footer-logo" /></a>
+        <p>
+          Stackly is a corporate event management studio producing conferences,
+          galas and launches with editorial taste and operational rigor.
+        </p>
+        <div class="footer-socials">
+          <a href="404.html" class="fsq" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="fsq" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="fsq" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html" class="fsq" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../index.html" class="flink"><span>Home</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="services.html" class="flink"><span>Services</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="events.html" class="flink"><span>Event</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="about.html" class="flink"><span>About</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="flink"><span>Contact</span><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <div class="f-contact">
+          <span class="f-contact-line"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          <span class="f-contact-line"><i class="fa-solid fa-envelope"></i> info@stackly.com</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-news">
+        <h4>The Brief</h4>
+        <p>Monthly field notes on event craft. No spam, unsubscribe anytime.</p>
+        <form class="news-form" id="newsForm" novalidate>
+          <input type="email" id="newsEmail" name="newsEmail" placeholder="Work email" aria-label="Email address" />
+          <button type="submit" class="news-btn stripes-btn" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <p class="news-note" id="newsNote" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container fb-inner">
+        <span>&copy; <span id="year">2026</span> Stackly. All rights reserved.</span>
+        <div class="fb-links">
+          <a href="404.html">Privacy</a>
+          <a href="404.html">Terms</a>
+          <button class="back-top" id="backTop" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="../JS/about.js"></script>
+
+  <script src="../JS/preloader.js"></script>
+</body>
+</html>

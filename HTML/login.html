@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Stackly Corporate Event Management</title>
+  <meta name="description" content="Sign in to Stackly — email, password and role. Backstage access to your next corporate event." />
+  <link rel="icon" href="../images/logo-icon.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../CSS/auth.css" />
+
+  <link rel="stylesheet" href="../CSS/preloader.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-inner">
+      <img class="pl-logo" src="../images/logo-full.webp" alt="Stackly" />
+      <div class="pl-icons">
+        <i class="fa-solid fa-sun pl-icon"></i>
+        <i class="fa-solid fa-moon pl-icon"></i>
+        <i class="fa-solid fa-gears pl-icon"></i>
+        <i class="fa-solid fa-crown pl-icon"></i>
+        <i class="fa-solid fa-award pl-icon"></i>
+      </div>
+      <div class="pl-loader"><span></span></div>
+      <p class="pl-loading">Loading</p>
+    </div>
+  </div>
+
+  <main class="auth-shell" id="authShell">
+
+    <!-- ===================== IMAGE SIDE ===================== -->
+    <section class="auth-media" id="authMedia" aria-hidden="true">
+      <figure class="auth-media-frame">
+        <img src="../images/ballroom-chandelier-reception-tables.webp" alt="Stackly gala ballroom ready for an event" />
+      </figure>
+      <div class="auth-media-veil"></div>
+
+      <a href="../index.html" class="auth-home auth-home-media" id="authHome">
+        <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+        <span class="auth-home-label">Back to Home</span>
+      </a>
+
+      <div class="am-chip am-chip-a">
+        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+        <span>328 events staged</span>
+      </div>
+      <div class="am-chip am-chip-b">
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+        <span>98% client satisfaction</span>
+      </div>
+      <div class="am-chip am-chip-c">
+        <i class="fa-solid fa-users" aria-hidden="true"></i>
+        <span>40k+ guests hosted</span>
+      </div>
+
+      <div class="auth-media-quote">
+        <p class="am-quote">&ldquo;The door to the stack is always open.&rdquo;</p>
+        <p class="am-quote-sub">Sign in to step backstage with Stackly.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FORM SIDE ===================== -->
+    <section class="auth-form" id="authForm">
+
+      <a href="../index.html" class="auth-logo" id="authLogo" aria-label="Stackly home">
+        <img src="../images/logo-full.webp" alt="Stackly" />
+      </a>
+
+      <header class="auth-head">
+        <p class="auth-kicker">Welcome back</p>
+        <h1 class="auth-title" id="authTitle">Sign in to the stack</h1>
+        <p class="auth-sub">Enter your access details to get backstage.</p>
+      </header>
+
+      <form class="auth-frm" id="loginForm" autocomplete="off" novalidate>
+
+        <div class="fld" data-field="email">
+          <label for="loginEmail">Email address</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-envelope fld-ico" aria-hidden="true"></i>
+            <input id="loginEmail" name="email" type="email" placeholder="you@gmail.com" autocomplete="off" aria-invalid="false" />
+          </div>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld" data-field="password">
+          <label for="loginPassword">Password</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-lock fld-ico" aria-hidden="true"></i>
+            <input id="loginPassword" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" aria-invalid="false" />
+            <button type="button" class="fld-eye" data-eye aria-label="Show password">
+              <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            </button>
+          </div>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld" data-field="role">
+          <label for="loginRole">Role</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-id-badge fld-ico" aria-hidden="true"></i>
+            <select id="loginRole" name="role" aria-invalid="false">
+              <option value="">Select your role</option>
+              <option value="organizer">Organizer</option>
+              <option value="guest">Guest</option>
+            </select>
+            <i class="fa-solid fa-chevron-down fld-caret" aria-hidden="true"></i>
+          </div>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld-row">
+          <label class="fld-check">
+            <input type="checkbox" id="loginRemember" name="remember" />
+            <span class="fld-checkbox" aria-hidden="true">
+              <i class="fa-solid fa-check" aria-hidden="true"></i>
+            </span>
+            <span class="fld-check-label">Remember me</span>
+          </label>
+          <a href="404.html" class="fld-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-gold stripes-btn btn-magnetic auth-submit" id="loginSubmit" data-magnetic>
+          <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+          <span class="btn-label">Login</span>
+        </button>
+
+        <div class="alt-divider"><span>or</span></div>
+
+        <a href="404.html" class="btn btn-ghost btn-conic btn-magnetic auth-google" id="googleLogin" data-magnetic>
+          <i class="fa-brands fa-google" aria-hidden="true"></i>
+          <span class="btn-label">Continue with Google</span>
+        </a>
+
+      </form>
+
+      <p class="auth-switch">
+        New to Stackly? <a href="signin.html">Create an account</a>
+      </p>
+
+      <div class="auth-toast" id="authToast" role="status" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="../JS/auth.js"></script>
+
+  <script src="../JS/preloader.js"></script>
+</body>
+</html>

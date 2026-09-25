@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Stackly</title>
+  <meta name="description" content="Reach the Stackly studio. Channels, the people who answer, our turnaround, offices on the map, and a letter that actually starts the room." />
+  <link rel="icon" href="../images/logo-icon.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="../CSS/contact.css" />
+
+  <link rel="stylesheet" href="../CSS/preloader.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-inner">
+      <img class="pl-logo" src="../images/logo-full.webp" alt="Stackly" />
+      <div class="pl-icons">
+        <i class="fa-solid fa-sun pl-icon"></i>
+        <i class="fa-solid fa-moon pl-icon"></i>
+        <i class="fa-solid fa-gears pl-icon"></i>
+        <i class="fa-solid fa-crown pl-icon"></i>
+        <i class="fa-solid fa-award pl-icon"></i>
+      </div>
+      <div class="pl-loader"><span></span></div>
+      <p class="pl-loading">Loading</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== SECTION 1 — HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="brand" id="brandHome" aria-label="Stackly home">
+        <img src="../images/logo-full.webp" alt="Stackly" class="brand-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../index.html" class="nav-link" data-wave>Home</a>
+        <a href="services.html" class="nav-link" data-wave>Services</a>
+        <a href="events.html" class="nav-link" data-wave>Event</a>
+        <a href="about.html" class="nav-link" data-wave>About</a>
+        <a href="contact.html" class="nav-link is-active" data-wave>Contact</a>
+      </nav>
+
+      <a href="login.html" class="btn btn-gold header-cta stripes-btn">
+        <span class="btn-label">Login</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE FULLSCREEN MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-head">
+      <a href="../index.html" aria-label="Stackly home"><img src="../images/logo-full.webp" alt="Stackly" class="mm-logo" /></a>
+      <button class="mm-close" id="mmClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mm-nav" aria-label="Mobile">
+      <a href="../index.html" class="mm-link"><span class="mm-num">01</span><span class="mm-label">Home</span></a>
+      <a href="services.html" class="mm-link"><span class="mm-num">02</span><span class="mm-label">Services</span></a>
+      <a href="events.html" class="mm-link"><span class="mm-num">03</span><span class="mm-label">Event</span></a>
+      <a href="about.html" class="mm-link"><span class="mm-num">04</span><span class="mm-label">About</span></a>
+      <a href="contact.html" class="mm-link is-active"><span class="mm-num">05</span><span class="mm-label">Contact</span></a>
+      <a href="login.html" class="mm-link mm-login">
+        <span class="mm-num"><i class="fa-solid fa-right-to-bracket"></i></span>
+        <span class="mm-label">Login</span>
+      </a>
+    </nav>
+    <div class="mm-foot">
+      <div class="mm-socials">
+        <a href="#" class="mm-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="mm-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="mm-soc" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="mm-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <p class="mm-contact"><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===================== SECTION 2 — HERO (THE SWITCHBOARD) ===================== -->
+    <section class="ct-hero" id="home">
+      <div class="ct-hero-glow" aria-hidden="true"></div>
+      <div class="ct-dial" aria-hidden="true">
+        <span class="ct-dial-hole"></span>
+        <span class="ct-dial-finger"></span>
+      </div>
+
+      <div class="ct-hero-grid">
+        <div class="ct-hero-txt">
+<div class="section-eyebrow">
+            <span class="eyebrow-rule"></span>
+            <span>Stackly &middot; The Switchboard</span>
+          </div>
+          <h1 class="ct-hero-title" id="ctHeroTitle">
+            <span class="ct-w"><span>Say</span></span>
+            <span class="ct-w"><span><em>hello</em></span></span>
+            <span class="ct-w"><span>to the room.</span></span>
+          </h1>
+          <p class="ct-hero-sub">
+            Phone, post, or deal made at a table &mdash; the studio keeps one line
+            open from first brief to final load-out.
+          </p>
+          <div class="ct-hero-actions">
+            <a href="404.html" class="btn btn-gold btn-magnetic stripes-btn" >
+              <span class="btn-label">Write the first line</span>
+              <i class="fa-solid fa-pen-nib"></i>
+            </a>
+            <a href="404.html" class="btn btn-ghost btn-conic">
+              <span class="btn-label">Find the studio</span>
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
+          </div>
+          <div class="ct-hero-tape">
+            <span class="ct-tape-dot"></span>
+            <span id="ctLineMsg">line 02 &mdash; awake since 06:12</span>
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+        </div>
+
+        <div class="ct-rolo" id="ctRolo">
+          <figure class="ct-rolo-card ct-rc-1" data-rc="0">
+            <img src="../images/modern-lobby-reception-marble.webp" alt="The reception desk, calm" />
+            <figcaption>the desk <span>reception</span></figcaption>
+          </figure>
+          <figure class="ct-rolo-card ct-rc-2" data-rc="1">
+            <img src="../images/corporate-team-meeting.webp" alt="The producers mid-call" />
+            <figcaption>the floor <span>producers</span></figcaption>
+          </figure>
+          <figure class="ct-rolo-card ct-rc-3" data-rc="2">
+            <img src="../images/elegant-ballroom-event.webp" alt="A room after we wrote it" />
+            <figcaption>the room <span>built</span></figcaption>
+          </figure>
+          <span class="ct-rolo-peg" aria-hidden="true"></span>
+          <span class="ct-rolo-tag" id="ctRoloTag">The desk</span>
+        </div>
+      </div>
+
+      </section>
+
+    <!-- ===================== SECTION 3 — CHANNELS (FOUR WAYS IN) ===================== -->
+    <section class="ct-channels" id="channels">
+      <div class="ct-ch-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>The Channels</span>
+        </div>
+        <h2 class="ct-ch-title" data-aos="fade-up">Four ways <em>into the switchboard</em></h2>
+        <p class="ct-ch-lead" data-aos="fade-up">Every line rings the same room. Hover a channel and the slot reel spins to the person who picks it up.</p>
+      </div>
+
+      <div class="ct-ch-list" id="ctChList">
+        <article class="ct-chan" data-chan="0">
+          <span class="ct-chan-idx">01</span>
+          <div class="ct-chan-body">
+            <h3>Email the studio</h3>
+            <p>The letter line. Briefs over attach-and-await, answers inside one working day.</p>
+            <a href="404.html" class="ct-chan-link">info@stackly.com</a>
+          </div>
+          <div class="ct-chan-slot" aria-hidden="true">
+            <div class="ct-chan-reel">
+              <img src="../images/executive-signing-document-desk.webp" alt="A brief being signed" />
+              <img src="../images/elegant-wedding-planning.webp" alt="Planning a reply" />
+              <img src="../images/moodboard-flatlay-planning-table.webp" alt="The brief on a table" />
+            </div>
+          </div>
+          <i class="fa-solid fa-envelope-open-text ct-chan-ico"></i>
+        </article>
+
+        <article class="ct-chan" data-chan="1">
+          <span class="ct-chan-idx">02</span>
+          <div class="ct-chan-body">
+            <h3>Call the floor</h3>
+            <p>A producer, not a queue. If we miss you, the callback is before lunch.</p>
+            <a href="404.html" class="ct-chan-link">+91 9764536787</a>
+          </div>
+          <div class="ct-chan-slot" aria-hidden="true">
+            <div class="ct-chan-reel">
+              <img src="../images/dynamic-keynote-moment.webp" alt="A call mid-keynote" />
+              <img src="../images/city-rooftop-party-dusk.webp" alt="Answering from a rooftop" />
+              <img src="../images/event-crew-team-celebration.webp" alt="The crew on the other end" />
+            </div>
+          </div>
+          <i class="fa-solid fa-phone ct-chan-ico"></i>
+        </article>
+
+        <article class="ct-chan" data-chan="2">
+          <span class="ct-chan-idx">03</span>
+          <div class="ct-chan-body">
+            <h3>Walk the desk</h3>
+            <p>Coffee's real, the floor plans are pinned to the wall, and the door is open until eight.</p>
+            <a href="404.html" class="ct-chan-link">The pinned door &mdash; see the map</a>
+          </div>
+          <div class="ct-chan-slot" aria-hidden="true">
+            <div class="ct-chan-reel">
+              <img src="../images/modern-lobby-reception-marble.webp" alt="The lobby" />
+              <img src="../images/ballroom-chandelier-reception-tables.webp" alt="Reception tables" />
+              <img src="../images/opulent-dinner-gathering.webp" alt="Dinner in the room" />
+            </div>
+          </div>
+          <i class="fa-solid fa-location-dot ct-chan-ico"></i>
+        </article>
+
+        <article class="ct-chan" data-chan="3">
+          <span class="ct-chan-idx">04</span>
+          <div class="ct-chan-body">
+            <h3>Book a walkthrough</h3>
+            <p>60 minutes on site with a producer and the actual run-of-show. No decks.</p>
+            <a href="404.html" class="ct-chan-link">Request a slot</a>
+          </div>
+          <div class="ct-chan-slot" aria-hidden="true">
+            <div class="ct-chan-reel">
+              <img src="../images/stage-setup-crew-day.webp" alt="Stepping the floor" />
+              <img src="../images/florist-decorating-floral-arch.webp" alt="The arch being dressed" />
+              <img src="../images/empty-ballroom-grand-hall.webp" alt="The blank room, early" />
+            </div>
+          </div>
+          <i class="fa-solid fa-shoe-prints ct-chan-ico"></i>
+        </article>
+      </div>
+    </section>
+<!-- ===================== SECTION 4 — THE WINDOW (LOUVER PORTRAITS) ===================== -->
+    <section class="ct-people" id="people">
+      <div class="ct-people-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>At the Window</span>
+        </div>
+        <h2 class="ct-people-title" data-aos="fade-up">The three who <em>answer</em></h2>
+        <p class="ct-people-lead" data-aos="fade-up">Open the blinds. These are the first voices you get &mdash; seniors, not receptionists.</p>
+      </div>
+
+      <div class="ct-windows" id="ctWindows">
+        <article class="ct-window" data-win="0">
+          <div class="ct-louver">
+            <span class="ct-lv ct-lv-1"></span>
+            <span class="ct-lv ct-lv-2"></span>
+            <span class="ct-lv ct-lv-3"></span>
+            <span class="ct-lv ct-lv-4"></span>
+            <span class="ct-lv ct-lv-5"></span>
+            <span class="ct-lv ct-lv-6"></span>
+          </div>
+          <figure class="ct-wportrait">
+            <img src="../images/woman-headshot-white-blazer.webp" alt="Amara Cole" />
+          </figure>
+          <span class="ct-wring" aria-hidden="true"></span>
+          <div class="ct-winfo">
+            <h3>Amara Cole</h3>
+            <span>Client partnerships &middot; reply in a day</span>
+            <a href="404.html">amara@stackly.events</a>
+          </div>
+        </article>
+
+        <article class="ct-window" data-win="1">
+          <div class="ct-louver">
+            <span class="ct-lv ct-lv-1"></span>
+            <span class="ct-lv ct-lv-2"></span>
+            <span class="ct-lv ct-lv-3"></span>
+            <span class="ct-lv ct-lv-4"></span>
+            <span class="ct-lv ct-lv-5"></span>
+            <span class="ct-lv ct-lv-6"></span>
+          </div>
+          <figure class="ct-wportrait">
+            <img src="../images/man-headshot-navy-suit.webp" alt="Marcus Ellery" />
+          </figure>
+          <span class="ct-wring" aria-hidden="true"></span>
+          <div class="ct-winfo">
+            <h3>Marcus Ellery</h3>
+            <span>Founder &middot; the hard get-backs</span>
+            <a href="404.html">marcus@stackly.events</a>
+          </div>
+        </article>
+
+        <article class="ct-window" data-win="2">
+          <div class="ct-louver">
+            <span class="ct-lv ct-lv-1"></span>
+            <span class="ct-lv ct-lv-2"></span>
+            <span class="ct-lv ct-lv-3"></span>
+            <span class="ct-lv ct-lv-4"></span>
+            <span class="ct-lv ct-lv-5"></span>
+            <span class="ct-lv ct-lv-6"></span>
+          </div>
+          <figure class="ct-wportrait">
+            <img src="../images/man-headshot-gray-suit.webp" alt="David Kwan" />
+          </figure>
+          <span class="ct-wring" aria-hidden="true"></span>
+          <div class="ct-winfo">
+            <h3>David Kwan</h3>
+            <span>Creative director &middot; the look of the room</span>
+            <a href="404.html">david@stackly.events</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="ct-people-note" data-aos="fade-up">
+        <span class="ct-note-label">ring times</span>
+        <p>All three take calls directly. If you get a different voice, you have the wrong number.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 5 — THE TURNAROUND (BRIEF TO REPLY) ===================== -->
+    <section class="ct-reply" id="reply">
+      <div class="ct-reply-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>The Turnaround</span>
+        </div>
+        <h2 class="ct-reply-title" data-aos="fade-up">Brief lands. <em>Reply flies.</em></h2>
+        <p class="ct-reply-lead" data-aos="fade-up">Every brief logged, every reply timed. No cable, no guesswork &mdash; just the clock running.</p>
+      </div>
+
+      <div class="ct-turns" id="ctTurns">
+        <div class="ct-turn" data-turn="0">
+          <span class="ct-turn-no">01</span>
+          <div class="ct-turn-brief">
+            <span class="ct-turn-tag">conference &middot; 420 seats</span>
+            <h3>Q3 summit, heads of sales</h3>
+            <p>Sent Tuesday 14:02 &mdash; needs a stage, not a guess.</p>
+          </div>
+          <div class="ct-turn-spend">
+            <span class="ct-turn-min" data-min="41">41</span>
+            <span class="ct-turn-minlab">min</span>
+            <i class="fa-solid fa-arrow-right-long ct-turn-flight" aria-hidden="true"></i>
+          </div>
+          <div class="ct-turn-reply">
+            <span class="ct-turn-hour">reply 14:58</span>
+            <p>Same day. Forty-one minutes.</p>
+            <span class="ct-turn-stamp">answered</span>
+          </div>
+        </div>
+
+        <div class="ct-turn" data-turn="1">
+          <span class="ct-turn-no">02</span>
+          <div class="ct-turn-brief">
+            <span class="ct-turn-tag">gala &middot; 180 covers</span>
+            <h3>Foundation awards night</h3>
+            <p>Sent Wednesday 09:40 &mdash; three sponsors, zero vetoes.</p>
+          </div>
+          <div class="ct-turn-spend">
+            <span class="ct-turn-min" data-min="22">22</span>
+            <span class="ct-turn-minlab">min</span>
+            <i class="fa-solid fa-arrow-right-long ct-turn-flight" aria-hidden="true"></i>
+          </div>
+          <div class="ct-turn-reply">
+            <span class="ct-turn-hour">reply 10:12</span>
+            <p>Next morning, first call back.</p>
+            <span class="ct-turn-stamp">answered</span>
+          </div>
+        </div>
+
+        <div class="ct-turn" data-turn="2">
+          <span class="ct-turn-no">03</span>
+          <div class="ct-turn-brief">
+            <span class="ct-turn-tag">launch &middot; one product</span>
+            <h3>Northwire vertex reveal</h3>
+            <p>Sent Thursday 16:55 &mdash; embargo tight, ceiling low.</p>
+          </div>
+          <div class="ct-turn-spend">
+            <span class="ct-turn-min" data-min="78">78</span>
+            <span class="ct-turn-minlab">min</span>
+            <i class="fa-solid fa-arrow-right-long ct-turn-flight" aria-hidden="true"></i>
+          </div>
+          <div class="ct-turn-reply">
+            <span class="ct-turn-hour">reply 18:03</span>
+            <p>After hours. We were already in the room.</p>
+            <span class="ct-turn-stamp">answered</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ct-reply-clock" data-aos="fade-up">
+        <i class="fa-solid fa-stopwatch"></i>
+        <span>median reply &mdash; 47 minutes</span>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 6 — THE OFFICES (ROUTE WALL) ===================== -->
+    <section class="ct-cities" id="cities">
+      <div class="ct-cities-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>The Desks</span>
+        </div>
+<h2 class="ct-cities-title" data-aos="fade-up">One studio, <em>three hands</em></h2>
+        <p class="ct-cities-lead" data-aos="fade-up">The desk answers, the floor builds, the room delivers. Hover a pin to drop a note down the wire.</p>
+      </div>
+
+      <div class="ct-route" id="ctRoute">
+        <span class="ct-route-wire" aria-hidden="true">
+          <span class="ct-route-dash" id="ctRouteDash"></span>
+        </span>
+
+<article class="ct-stop" data-stop="0">
+          <span class="ct-pin" aria-hidden="true"></span>
+          <div class="ct-postcard">
+            <img src="../images/modern-lobby-reception-marble.webp" alt="The desk, where it lives" />
+            <div class="ct-postcard-body">
+              <h3>The Desk</h3>
+              <span>Mail, calls and coffee &mdash; the pinned studio</span>
+              <a href="404.html"><i class="fa-solid fa-arrow-right"></i> on the map</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="ct-stop" data-stop="1">
+          <span class="ct-pin" aria-hidden="true"></span>
+          <div class="ct-postcard">
+            <img src="../images/stage-setup-crew-day.webp" alt="The floor, where it is built" />
+            <div class="ct-postcard-body">
+              <h3>The Floor</h3>
+              <span>The crew travels to the room, not the other way</span>
+              <a href="404.html"><i class="fa-solid fa-arrow-right"></i> on the map</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="ct-stop" data-stop="2">
+          <span class="ct-pin" aria-hidden="true"></span>
+          <div class="ct-postcard">
+            <img src="../images/opulent-dinner-gathering.webp" alt="The room on the night" />
+            <div class="ct-postcard-body">
+              <h3>The Room</h3>
+              <span>Wherever your date is &mdash; we build it there</span>
+              <a href="404.html"><i class="fa-solid fa-arrow-right"></i> on the map</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+<div class="ct-cities-note" data-aos="fade-up">
+        <span class="ct-note-label">one studio, everywhere</span>
+        <p>The crew ships to the room &mdash; the desk holds your line from the pin on the map.</p>
+      </div>
+    </section>
+<!-- ===================== SECTION 7 — THE RELAY (STAMP PIPELINE) ===================== -->
+    <section class="ct-relay" id="relay">
+      <div class="ct-relay-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>The Relay</span>
+        </div>
+        <h2 class="ct-relay-title" data-aos="fade-up">What your letter <em>becomes</em></h2>
+        <p class="ct-relay-lead" data-aos="fade-up">A brief passes four desks before it becomes a room. Stamp past each one.</p>
+      </div>
+
+      <div class="ct-relay-track" id="ctRelayTrack">
+        <div class="ct-stamp" data-stamp="0">
+          <span class="ct-stamp-frame" data-stamp-label="read">
+            <img src="../images/moodboard-flatlay-planning-table.webp" alt="Event planning moodboard with swatches and notes" />
+          </span>
+          <div class="ct-stamp-copy">
+            <span class="ct-stamp-no">01</span>
+            <h3>Read</h3>
+            <p>A producer reads it before it reaches a folder.</p>
+          </div>
+        </div>
+
+        <div class="ct-stamp" data-stamp="1">
+          <span class="ct-stamp-frame" data-stamp-label="scoped">
+            <img src="../images/executive-signing-document-desk.webp" alt="Executive signing a scoping document at a desk" />
+          </span>
+          <div class="ct-stamp-copy">
+            <span class="ct-stamp-no">02</span>
+            <h3>Scoped</h3>
+            <p>Rough numbers, hard constraints, one honest note.</p>
+          </div>
+        </div>
+
+        <div class="ct-stamp" data-stamp="2">
+          <span class="ct-stamp-frame" data-stamp-label="approved">
+            <img src="../images/partnership-handshake-deal.webp" alt="Two colleagues shaking hands over an approved scope" />
+          </span>
+          <div class="ct-stamp-copy">
+            <span class="ct-stamp-no">03</span>
+            <h3>Approved</h3>
+            <p>You sign the scope. Nothing builds before this ink.</p>
+          </div>
+        </div>
+
+        <div class="ct-stamp" data-stamp="3">
+          <span class="ct-stamp-frame" data-stamp-label="delivered">
+            <img src="../images/festival-confetti-blast.webp" alt="Confetti celebration as a delivered event opens" />
+          </span>
+          <div class="ct-stamp-copy">
+            <span class="ct-stamp-no">04</span>
+            <h3>Delivered</h3>
+            <p>The letter becomes a room. Same date you wrote.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 8 — THE MAP (EMBEDDED) ===================== -->
+    <section class="ct-map" id="map">
+      <div class="ct-map-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>The Corner</span>
+        </div>
+        <h2 class="ct-map-title" data-aos="fade-up">The street where <em>the desk lives</em></h2>
+        <p class="ct-map-lead" data-aos="fade-up">Turn the board, drop the pin, walk the door. The map is live &mdash; the coffee is not a lie.</p>
+      </div>
+
+      <div class="ct-map-frame" id="ctMapFrame">
+        <span class="ct-map-corner ct-mc-tl" aria-hidden="true"></span>
+        <span class="ct-map-corner ct-mc-tr" aria-hidden="true"></span>
+        <span class="ct-map-corner ct-mc-bl" aria-hidden="true"></span>
+        <span class="ct-map-corner ct-mc-br" aria-hidden="true"></span>
+        <span class="ct-compass" aria-hidden="true"><i class="fa-solid fa-location-arrow"></i></span>
+
+        <div class="ct-map-stage" id="ctMapStage">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616097152896!2d78.1739798!3d11.682956599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1790220501413!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Stackly studio location"
+          ></iframe>
+        </div>
+
+        <span class="ct-map-pin" id="ctMapPin" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 9 — THE LETTER (CONTACT FORM) ===================== -->
+    <section class="ct-letter" id="letter">
+      <div class="ct-letter-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>The Letter</span>
+        </div>
+        <h2 class="ct-letter-title" data-aos="fade-up">Write it, <em>send it, room it</em></h2>
+        <p class="ct-letter-lead" data-aos="fade-up">A real inbox, a named producer, and a reply inside one working day. No capture walls.</p>
+      </div>
+
+      <div class="ct-letter-grid">
+        <div class="ct-letter-side" id="ctLetterSide">
+          <div class="ct-sheet" id="ctSheet">
+            <figure class="ct-sheet-fig">
+              <img src="../images/executive-signing-document-desk.webp" alt="The brief as it starts" id="ctSheetImg" />
+              <span class="ct-sheet-fold" aria-hidden="true"></span>
+            </figure>
+            <p class="ct-sheet-write" id="ctSheetWrite">
+              <i class="fa-solid fa-feather-pointed"></i>
+              Start with your name, then tell us the date.
+            </p>
+            <div class="ct-sig" aria-hidden="true">
+              <span class="ct-sig-line"></span>
+              <span class="ct-sig-seal"><i class="fa-solid fa-ink"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="ct-letter-form" id="ctLetterForm" novalidate>
+          <div class="ct-field" data-field="name">
+            <label for="ctName">Your name</label>
+            <input type="text" id="ctName" name="name" placeholder="Fiona Arden" autocomplete="name" />
+            <span class="ct-field-line" aria-hidden="true"></span>
+            <span class="ct-field-msg">Please tell us your name.</span>
+          </div>
+
+          <div class="ct-field" data-field="email">
+            <label for="ctEmail">Work email</label>
+            <input type="email" id="ctEmail" name="email" placeholder="you@company.com" autocomplete="email" />
+            <span class="ct-field-line" aria-hidden="true"></span>
+            <span class="ct-field-msg">Enter a valid work email (e.g. you@company.com).</span>
+          </div>
+
+          <div class="ct-field" data-field="date">
+            <label for="ctDate">The date of the night</label>
+            <input type="text" id="ctDate" name="date" placeholder="e.g. 14 March 2027" />
+            <span class="ct-field-line" aria-hidden="true"></span>
+            <span class="ct-field-msg">Pick the date of the night.</span>
+          </div>
+
+          <div class="ct-field" data-field="shape">
+            <label for="ctShape">The shape of the room</label>
+            <textarea id="ctShape" name="shape" rows="4" placeholder="Six hundred people, one keynote, a catering hold downstairs than none of us trust yet."></textarea>
+            <span class="ct-field-line" aria-hidden="true"></span>
+            <span class="ct-field-msg">A room takes at least a sentence &mdash; twelve characters.</span>
+          </div>
+
+          <button type="submit" class="btn btn-gold stripes-btn ct-letter-btn">
+            <span class="btn-label"><i class="fa-solid fa-paper-plane"></i> Post the letter</span>
+          </button>
+          <p class="ct-letter-note" id="ctLetterNote" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 10 — THE BOARD (PINNED NOTES) ===================== -->
+    <section class="ct-board" id="board">
+      <div class="ct-board-head">
+        <div class="section-eyebrow" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>The Board</span>
+        </div>
+        <h2 class="ct-board-title" data-aos="fade-up">Notes that <em>came in today</em></h2>
+        <p class="ct-board-lead" data-aos="fade-up">Real fragments from the last batch of briefs. Pull a note if it looks familiar.</p>
+      </div>
+
+      <div class="ct-board-grid" id="ctBoardGrid">
+        <figure class="ct-note" data-note="0" tabindex="0">
+          <img src="../images/elegant-blue-gala.webp" alt="A blue gala in progress" />
+          <figcaption>
+            <span class="ct-note-time">in &middot; 09:21</span>
+            <p>&ldquo;Board approved the chandeliers. Now sell me the light plot.&rdquo;</p>
+          </figcaption>
+          <span class="ct-pinhead" aria-hidden="true"></span>
+        </figure>
+
+        <figure class="ct-note" data-note="1" tabindex="0">
+          <img src="../images/rooftop-evening-gathering.webp" alt="A rooftop evening" />
+          <figcaption>
+            <span class="ct-note-time">in &middot; 11:47</span>
+            <p>&ldquo;Six hundred heads, one stage, rain plan already in the room.&rdquo;</p>
+          </figcaption>
+          <span class="ct-pinhead" aria-hidden="true"></span>
+        </figure>
+
+        <figure class="ct-note" data-note="2" tabindex="0">
+          <img src="../images/illuminated-conference-stage.webp" alt="An illuminated stage" />
+          <figcaption>
+            <span class="ct-note-time">in &middot; 14:03</span>
+            <p>&ldquo;The keynote lands at nine. We rehearse at five. No keynote nerves.&rdquo;</p>
+          </figcaption>
+          <span class="ct-pinhead" aria-hidden="true"></span>
+        </figure>
+
+        <figure class="ct-note" data-note="3" tabindex="0">
+          <img src="../images/festival-confetti-blast.webp" alt="Confetti over the finish" />
+          <figcaption>
+            <span class="ct-note-time">in &middot; 16:30</span>
+            <p>&ldquo;Last load-out done before the servers poured. Room already booked again.&rdquo;</p>
+          </figcaption>
+          <span class="ct-pinhead" aria-hidden="true"></span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 11 — RING THE BELL (CLOSING) ===================== -->
+    <section class="ct-wave" id="wave">
+      <div class="ct-wave-photo">
+        <img src="../images/evening-rooftop-party.webp" alt="A room waiting to be written" id="ctWaveImg" />
+        <div class="ct-wave-veil" aria-hidden="true"></div>
+      </div>
+
+      <div class="ct-wave-inner">
+        <span class="ct-bell" id="ctBell" aria-hidden="true">
+          <i class="fa-solid fa-bell"></i>
+          <span class="ct-bell-hammer"></span>
+          <span class="ct-bell-ring"></span>
+        </span>
+
+        <div class="section-eyebrow eyebrow-light" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>Ring the bell</span>
+        </div>
+
+        <h2 class="ct-wave-title" data-aos="fade-up">One line is <em>always open.</em></h2>
+        <p class="ct-wave-sub" data-aos="fade-up" data-aos-delay="120">
+          Speak, and the switchboard lights up. A producer answers, the tape starts,
+          and the room you wrote actually opens on the date you picked.
+        </p>
+
+        <div class="ct-wave-actions" data-aos="fade-up" data-aos-delay="220">
+          <a href="404.html" class="btn btn-gold btn-magnetic stripes-btn" data-magnetic>
+            <span class="btn-label">Post the letter</span>
+            <i class="fa-solid fa-pen-nib"></i>
+          </a>
+          <a href="404.html" class="ct-wave-phone">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 9764536787</span>
+          </a>
+        </div>
+
+        <div class="ct-wave-mini" data-aos="fade-up" data-aos-delay="320">
+          <span><i class="fa-solid fa-envelope"></i> info@stackly.com</span>
+          <span><i class="fa-solid fa-location-dot"></i> The pinned studio</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== SECTION 12 — FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html"><img src="../images/logo-full.webp" alt="Stackly" class="footer-logo" /></a>
+        <p>
+          Stackly is a corporate event management studio producing conferences,
+          galas and launches with editorial taste and operational rigor.
+        </p>
+        <div class="footer-socials">
+          <a href="404.html" class="fsq" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="fsq" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="fsq" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html" class="fsq" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../index.html" class="flink"><span>Home</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="services.html" class="flink"><span>Services</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="events.html" class="flink"><span>Event</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="about.html" class="flink"><span>About</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="flink"><span>Contact</span><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <div class="f-contact">
+          <span class="f-contact-line"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          <span class="f-contact-line"><i class="fa-solid fa-envelope"></i> info@stackly.com</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-news">
+        <h4>The Brief</h4>
+        <p>Monthly field notes on event craft. No spam, unsubscribe anytime.</p>
+        <form class="news-form" id="newsForm" novalidate>
+          <input type="email" id="newsEmail" name="newsEmail" placeholder="Work email" aria-label="Email address" />
+          <button type="submit" class="news-btn stripes-btn" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <p class="news-note" id="newsNote" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container fb-inner">
+        <span>&copy; <span id="year">2026</span> Stackly. All rights reserved.</span>
+        <div class="fb-links">
+          <a href="404.html">Privacy</a>
+          <a href="404.html">Terms</a>
+          <button class="back-top" id="backTop" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="../JS/contact.js"></script>
+
+  <script src="../JS/preloader.js"></script>
+</body>
+</html>

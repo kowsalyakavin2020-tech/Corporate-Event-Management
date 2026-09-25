@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — Stackly Corporate Event Management</title>
+  <meta name="description" content="A season of unforgettable rooms. Stackly Events — explore upcoming premieres, venues, culinary craft and the shows we produce." />
+  <link rel="icon" href="../images/logo-icon.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="../CSS/events.css" />
+
+  <link rel="stylesheet" href="../CSS/preloader.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-inner">
+      <img class="pl-logo" src="../images/logo-full.webp" alt="Stackly" />
+      <div class="pl-icons">
+        <i class="fa-solid fa-sun pl-icon"></i>
+        <i class="fa-solid fa-moon pl-icon"></i>
+        <i class="fa-solid fa-gears pl-icon"></i>
+        <i class="fa-solid fa-crown pl-icon"></i>
+        <i class="fa-solid fa-award pl-icon"></i>
+      </div>
+      <div class="pl-loader"><span></span></div>
+      <p class="pl-loading">Loading</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== SECTION 1 — HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="brand" id="brandHome" aria-label="Stackly home">
+        <img src="../images/logo-full.webp" alt="Stackly" class="brand-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../index.html" class="nav-link" data-wave>Home</a>
+        <a href="services.html" class="nav-link" data-wave>Services</a>
+        <a href="events.html" class="nav-link is-active" data-wave>Event</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link" data-wave>Contact</a>
+      </nav>
+
+      <a href="login.html" class="btn btn-gold header-cta stripes-btn">
+        <span class="btn-label">Login</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE FULLSCREEN MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-head">
+      <a href="../index.html" aria-label="Stackly home"><img src="../images/logo-full.webp" alt="Stackly" class="mm-logo" /></a>
+      <button class="mm-close" id="mmClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mm-nav" aria-label="Mobile">
+      <a href="../index.html" class="mm-link"><span class="mm-num">01</span><span class="mm-label">Home</span></a>
+      <a href="services.html" class="mm-link"><span class="mm-num">02</span><span class="mm-label">Services</span></a>
+      <a href="events.html" class="mm-link is-active"><span class="mm-num">03</span><span class="mm-label">Event</span></a>
+      <a href="about.html" class="mm-link"><span class="mm-num">04</span><span class="mm-label">About</span></a>
+      <a href="contact.html" class="mm-link"><span class="mm-num">05</span><span class="mm-label">Contact</span></a>
+      <a href="login.html" class="mm-link mm-login">
+        <span class="mm-num"><i class="fa-solid fa-right-to-bracket"></i></span>
+        <span class="mm-label">Login</span>
+      </a>
+    </nav>
+    <div class="mm-foot">
+      <div class="mm-socials">
+        <a href="#" class="mm-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="mm-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="mm-soc" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="mm-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <p class="mm-contact"><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===================== SECTION 2 — HERO (EVENT POSTER FAN) ===================== -->
+    <section class="eh-hero" id="home">
+      <div class="eh-halo" aria-hidden="true"></div>
+      <div class="eh-dotrow" aria-hidden="true">
+        <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i>
+        <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i>
+      </div>
+
+      <div class="eh-copy">
+        <div class="eyebrow" data-aos="fade-right">
+          <span class="eyebrow-rule"></span>
+          <span>Stackly · Event Index 2026</span>
+        </div>
+        <h1 class="eh-title" aria-label="A season of unforgettable rooms">A season of unforgettable rooms</h1>
+        <p class="eh-sub" data-aos="fade-up" data-aos-delay="200">
+          Twelve flagship productions, five cities, one ticket to front-row access.
+          Pull an event poster from the fan and step inside.
+        </p>
+        <div class="eh-actions" data-aos="fade-up" data-aos-delay="320">
+          <a href="404.html" class="btn btn-gold btn-magnetic stripes-btn" data-magnetic>
+            <span class="btn-label">Browse the season</span>
+            <i class="fa-solid fa-arrow-down-long"></i>
+          </a>
+          <a href="404.html" class="btn btn-ghost btn-conic">
+            <span class="btn-label">Request a pass</span>
+            <i class="fa-regular fa-envelope-open"></i>
+          </a>
+        </div>
+        <div class="eh-meta" data-aos="fade-up" data-aos-delay="440">
+          <span><i class="fa-solid fa-calendar-days"></i> Season opens Mar 12</span>
+          <span><i class="fa-solid fa-location-dot"></i> Metro · Coastline · Foothills</span>
+        </div>
+      </div>
+
+      <div class="eh-deck" id="ehDeck" aria-label="Five event posters">
+        <article class="eh-post" data-post data-tilt="0">
+          <div class="eh-ph">
+            <img src="../images/bonfire-night-gathering-crowd.webp" alt="Bonfire night gathering poster" />
+          </div>
+          <div class="eh-plate">
+            <span class="eh-plate-name">Ember Nights</span>
+            <span class="eh-plate-sub">Foothills · Mar 21</span>
+          </div>
+          <span class="eh-num">01</span>
+        </article>
+
+        <article class="eh-post" data-post>
+          <div class="eh-ph">
+            <img src="../images/illuminated-conference-stage.webp" alt="Illuminated conference stage poster" />
+          </div>
+          <div class="eh-plate">
+            <span class="eh-plate-name">Summit Zero</span>
+            <span class="eh-plate-sub">Metro · Mar 28</span>
+          </div>
+          <span class="eh-num">02</span>
+        </article>
+
+        <article class="eh-post eh-post-hero" data-post>
+          <div class="eh-ph">
+            <img src="../images/elegant-wedding-planning.webp" alt="Elegant celebration poster" />
+          </div>
+          <div class="eh-plate">
+            <span class="eh-plate-name">The Gilded Table</span>
+            <span class="eh-plate-sub">Coastline · Apr 05</span>
+          </div>
+          <span class="eh-num">03</span>
+        </article>
+
+        <article class="eh-post" data-post>
+          <div class="eh-ph">
+            <img src="../images/modern-lobby-reception-marble.webp" alt="Modern lobby marble poster" />
+          </div>
+          <div class="eh-plate">
+            <span class="eh-plate-name">Atrium Takeover</span>
+            <span class="eh-plate-sub">Metro · Apr 11</span>
+          </div>
+          <span class="eh-num">04</span>
+        </article>
+
+        <article class="eh-post" data-post>
+          <div class="eh-ph">
+            <img src="../images/elegant-dinner-setting.webp" alt="Elegant dinner setting poster" />
+          </div>
+          <div class="eh-plate">
+            <span class="eh-plate-name">Salon Premier</span>
+            <span class="eh-plate-sub">Coastline · Apr 18</span>
+          </div>
+          <span class="eh-num">05</span>
+        </article>
+      </div>
+
+      </section>
+
+    <!-- ===================== SECTION 3 — THE SEASON ===================== -->
+    <section class="sn-section" id="season">
+      <span class="sn-gradient" aria-hidden="true"></span>
+
+      <div class="container">
+        <div class="section-head section-head-center">
+          <div class="section-eyebrow eyebrow-center" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>This Season</span>
+          </div>
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+            Three premieres, front of the calendar
+          </h2>
+        </div>
+
+        <div class="sn-field">
+          <article class="sn-plate" data-snplate>
+            <figure class="sn-frame">
+              <img src="../images/elegant-blue-gala.webp" alt="Blue gala premiere" />
+            </figure>
+            <div class="sn-dusk" aria-hidden="true"></div>
+            <span class="sn-tag"><i class="fa-regular fa-clock"></i> Waitlist</span>
+            <div class="sn-copy">
+              <span class="sn-idx">01</span>
+              <span class="sn-date"><i class="fa-solid fa-calendar-day"></i> Mar 12 <i class="fa-solid fa-angles-right"></i> Metro</span>
+              <h3 class="sn-name">The Midnight Gala</h3>
+              <p class="sn-sub">A black-tie premiere where the room is the stunt &mdash; 900 covers, kinetic chandeliers, one unrepeatable balcony moment.</p>
+              <div class="sn-foot">
+                <span class="sn-cap"><i class="fa-solid fa-user-group"></i> 900 seats</span>
+                <a href="404.html" class="sn-link">Get on the list <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <i class="fa-solid fa-burst sn-fx" aria-hidden="true"></i>
+          </article>
+
+          <article class="sn-plate" data-snplate>
+            <figure class="sn-frame">
+              <img src="../images/florist-decorating-floral-arch.webp" alt="Floral arch premiere" />
+            </figure>
+            <div class="sn-dusk" aria-hidden="true"></div>
+            <span class="sn-tag"><i class="fa-solid fa-bolt"></i> Front row</span>
+            <div class="sn-copy">
+              <span class="sn-idx">02</span>
+              <span class="sn-date"><i class="fa-solid fa-calendar-day"></i> Apr 02 <i class="fa-solid fa-angles-right"></i> Coastline</span>
+              <h3 class="sn-name">The Founder&rsquo;s Summit</h3>
+              <p class="sn-sub">Closed-door stage hours with 60 founders, living installations, and a dinner designed around one hard conversation.</p>
+              <div class="sn-foot">
+                <span class="sn-cap"><i class="fa-solid fa-user-group"></i> 120 guests</span>
+                <a href="404.html" class="sn-link">Request seats <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <i class="fa-solid fa-burst sn-fx" aria-hidden="true"></i>
+          </article>
+
+          <article class="sn-plate" data-snplate>
+            <figure class="sn-frame">
+              <img src="../images/ballroom-chandelier-reception-tables.webp" alt="Ballroom reception premiere" />
+            </figure>
+            <div class="sn-dusk" aria-hidden="true"></div>
+            <span class="sn-tag"><i class="fa-solid fa-check"></i> On sale</span>
+            <div class="sn-copy">
+              <span class="sn-idx">03</span>
+              <span class="sn-date"><i class="fa-solid fa-calendar-day"></i> Apr 19 <i class="fa-solid fa-angles-right"></i> Foothills</span>
+              <h3 class="sn-name">The Orchid Reception</h3>
+              <p class="sn-sub">A ballroom transformed into a conservatory &mdash; gravity-defying florals, a live orchestra, and a toast timed to the last sunset.</p>
+              <div class="sn-foot">
+                <span class="sn-cap"><i class="fa-solid fa-user-group"></i> 400 seats</span>
+                <a href="404.html" class="sn-link">Book a table <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 4 — BACKSTAGE DIARY ===================== -->
+    <section class="dy-section" id="diary">
+      <div class="dy-frame">
+        <div class="dy-sticky" id="dySticky">
+          <figure class="dy-vis" data-aos="fade-up">
+            <img class="dy-img-a" src="../images/florist-arranging-blooms.webp" alt="Florist arranging blooms backstage" />
+            <img class="dy-img-b" src="../images/florist-holding-red-bouquet.webp" alt="Florist holding red bouquet" />
+            <span class="dy-stamp"><i class="fa-solid fa-clapperboard"></i> Behind the scenes</span>
+          </figure>
+          <div class="dy-badge" data-aos="zoom-in" data-aos-delay="200"><i class="fa-solid fa-star"></i> 96% of exits rate the craft first</div>
+        </div>
+
+        <div class="dy-list">
+          <div class="section-eyebrow" data-aos="fade-right">
+            <span class="eyebrow-rule"></span>
+            <span>Backstage Diary</span>
+          </div>
+          <h3 class="dy-title" data-aos="fade-right" data-aos-delay="80">
+            The quiet hours <em>before</em> the first seat fills
+          </h3>
+
+          <div class="dy-rail" id="dyRail"><span class="dy-rail-fill" id="dyRailFill"></span></div>
+
+          <div class="dy-items" id="dyItems">
+            <article class="dy-item" data-dyitem>
+              <span class="dy-idx">D-1</span>
+              <div class="dy-chip"><i class="fa-solid fa-hand-sparkles"></i> 06:00</div>
+              <h4 class="dy-item-title">Florals hit the loading dock</h4>
+              <p class="dy-item-text">Two vans of stems staged six hours out. The arch crew works in silence so the ballroom stays a surprise.</p>
+              <figure class="dy-thumb"><img src="../images/chef-plating-dish.webp" alt="Chef plating a dish" /></figure>
+            </article>
+
+            <article class="dy-item" data-dyitem>
+              <span class="dy-idx">D-1</span>
+              <div class="dy-chip"><i class="fa-solid fa-mug-saucer"></i> 11:30</div>
+              <h4 class="dy-item-title">Last walkie battery, first site pass</h4>
+              <p class="dy-item-text">Every lamp, table and cable is ticked against the run-of-show. The producer signs the board at noon.</p>
+              <figure class="dy-thumb"><img src="../images/stage-setup-crew-day.webp" alt="Crew setting up stage" /></figure>
+            </article>
+
+            <article class="dy-item" data-dyitem>
+              <span class="dy-idx">D-0</span>
+              <div class="dy-chip"><i class="fa-solid fa-fire"></i> 19:00</div>
+              <h4 class="dy-item-title">The room goes black on cue</h4>
+              <p class="dy-item-text">Show-call begins. Doors hold for ninety seconds while the lighting state walks its own choreography.</p>
+              <figure class="dy-thumb"><img src="../images/moodboard-flatlay-planning-table.webp" alt="Planning moodboard" /></figure>
+            </article>
+
+            <article class="dy-item" data-dyitem>
+              <span class="dy-idx">D+1</span>
+              <div class="dy-chip"><i class="fa-solid fa-file-signature"></i> 09:00</div>
+              <h4 class="dy-item-title">The debrief lands first</h4>
+              <p class="dy-item-text">Attendee heatmaps, pledge lift and supplier scorecards arrive before the first photo is posted.</p>
+              <figure class="dy-thumb"><img src="../images/executive-signing-document-desk.webp" alt="Executive signing documents" /></figure>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 5 — VENUE ROTOSCOPE ===================== -->
+    <section class="vn-section" id="venues">
+      <div class="vn-stage" id="vnStage">
+        <figure class="vn-layer is-live" data-vnlayer data-venue="Atrium Terrace" data-city="The Metro" data-cap="1,200">
+          <img src="../images/modern-lobby-reception-marble.webp" alt="Atrium terrace venue" />
+        </figure>
+        <figure class="vn-layer" data-vnlayer data-venue="The Grand Hall" data-city="The Coastline" data-cap="2,400">
+          <img src="../images/empty-ballroom-grand-hall.webp" alt="Grand hall venue" />
+        </figure>
+        <figure class="vn-layer" data-vnlayer data-venue="Celestial Ballroom" data-city="The Foothills" data-cap="900">
+          <img src="../images/elegant-blue-gala.webp" alt="Celestial ballroom venue" />
+        </figure>
+
+        <span class="vn-ring" aria-hidden="true"></span>
+        <span class="vn-cross" aria-hidden="true"><i class="fa-solid fa-location-crosshairs"></i></span>
+
+        <div class="vn-readout">
+          <div class="vn-venue" id="vnVenue">Atrium Terrace</div>
+          <div class="vn-subrow">
+            <span id="vnCity">The Metro</span><i class="fa-solid fa-asterisk"></i>
+            <span id="vnCap">1,200</span><i class="fa-solid fa-asterisk"></i>
+            <span>The Stackly Roto</span>
+          </div>
+        </div>
+
+        <div class="vn-counter"><span id="vnCur">01</span><em>/</em><i>03</i></div>
+
+        <div class="vn-hint">Scroll to rotate the venue <i class="fa-solid fa-rotate"></i></div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 6 — THE EXPERIENCE ===================== -->
+    <section class="xp-section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-eyebrow" data-aos="fade-right">
+              <span class="eyebrow-rule"></span>
+              <span>The Experience</span>
+            </div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="80">
+              Hover the <em>room</em>, read the moment
+            </h2>
+          </div>
+          <p class="section-desc" data-aos="fade-left">
+            Every production hides small stand-ins &mdash; touch the markers to
+            see what the audience never does.
+          </p>
+        </div>
+
+        <div class="xp-stage" id="xpStage">
+          <div class="xp-ph">
+            <img src="../images/audience-celebration-applause.webp" alt="Audience celebrating at an event" />
+          </div>
+          <div class="xp-shade" aria-hidden="true"></div>
+
+          <button class="xp-hot xp-a" data-hot data-xp="18" data-yp="26" aria-label="Audio marker">
+            <i class="fa-solid fa-wave-square"></i>
+            <span class="xp-tip">
+              <strong>Dead-quiet room</strong>
+              <span>24 array speakers mapped so a dropped pin is audible at the whisper row.</span>
+            </span>
+          </button>
+          <button class="xp-hot xp-b" data-hot data-xp="64" data-yp="18" aria-label="Light marker">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span class="xp-tip">
+              <strong>150 lighting cues</strong>
+              <span>Every applause line has its own state change. The room breathes with the speaker.</span>
+            </span>
+          </button>
+          <button class="xp-hot xp-c" data-hot data-xp="30" data-yp="66" aria-label="Stage marker">
+            <i class="fa-solid fa-tower-broadcast"></i>
+            <span class="xp-tip">
+              <strong>Zero-gap stage clock</strong>
+              <span>A producer on comms kills dead air in under nine tenths of a second.</span>
+            </span>
+          </button>
+          <button class="xp-hot xp-d" data-hot data-xp="76" data-yp="58" aria-label="Hospitality marker">
+            <i class="fa-solid fa-champagne-glasses"></i>
+            <span class="xp-tip">
+              <strong>Champagne on rails</strong>
+              <span>Service timed to the beat of the agenda &mdash; pour collides with applause.</span>
+            </span>
+          </button>
+          <button class="xp-hot xp-e" data-hot data-xp="48" data-yp="84" aria-label="Exit marker">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span class="xp-tip">
+              <strong>Apex exits</strong>
+              <span>Coat check, rideshare lane and signage set to empty 1,200 guests in eleven minutes.</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="xp-strip">
+          <div class="xp-card" data-aos="fade-up">
+            <i class="fa-solid fa-stopwatch"></i>
+            <div><strong data-count="11" data-suffix="m">0</strong><span>room reset time</span></div>
+          </div>
+          <div class="xp-card" data-aos="fade-up" data-aos-delay="120">
+            <i class="fa-solid fa-microphone-lines"></i>
+            <div><strong data-count="150" data-suffix="+">0</strong><span>cues per show</span></div>
+          </div>
+          <div class="xp-card" data-aos="fade-up" data-aos-delay="240">
+            <i class="fa-solid fa-people-group"></i>
+            <div><strong data-count="62" data-suffix="+">0</strong><span>crew on comms</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 7 — CULINARY CRAFT ===================== -->
+    <section class="cu-section" id="culinary">
+      <div class="container cu-frame">
+        <div class="cu-visual">
+          <figure class="cu-img-a" data-aos="fade-up">
+            <img src="../images/chef-plating-dish.webp" alt="Chef plating a signature dish" />
+          </figure>
+          <figure class="cu-img-b" data-aos="fade-up" data-aos-delay="150">
+            <img src="../images/chef-plating-closeup-hands.webp" alt="Chef hands plating closeup" />
+          </figure>
+          <div class="cu-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fa-solid fa-utensils"></i>
+            <div><strong>29</strong><span>courses delivered per season</span></div>
+          </div>
+        </div>
+
+        <div class="cu-panel">
+          <div class="section-eyebrow" data-aos="fade-left">
+            <span class="eyebrow-rule"></span>
+            <span>Culinary Craft</span>
+          </div>
+          <h3 class="cu-title" data-aos="fade-left" data-aos-delay="80">
+            Plated like a <em>program change</em>
+          </h3>
+          <p class="cu-copy" data-aos="fade-left" data-aos-delay="160">
+            Menus scored to the run-of-show. Tap a course to set the table.
+          </p>
+
+          <div class="cu-list" id="cuList">
+            <div class="cu-row" data-curowe data-img="../images/fine-dining-plate-closeup.webp" data-cap="Open with citrus, enigma" role="button" tabindex="0" aria-expanded="false">
+              <div class="cu-row-head">
+                <span class="cu-idx">P1</span>
+                <span class="cu-who"><strong>Amuse</strong><i>Pomelo, dill oil, brûlée</i></span>
+                <i class="fa-solid fa-plus cu-plus" aria-hidden="true"></i>
+              </div>
+              <div class="cu-open">
+                <figure class="cu-open-img"><img src="../images/fine-dining-plate-closeup.webp" alt="Amuse course plate" /></figure>
+                <p class="cu-open-txt"><strong>Amuse</strong> — a bright, cool first bite: pomelo, dill oil and a whisper of brûlée, served as the room settles.</p>
+              </div>
+            </div>
+            <div class="cu-row" data-curowe data-img="../images/elegant-tablescape-blue-gold.webp" data-cap="Main, served in blue hour" role="button" tabindex="0" aria-expanded="false">
+              <div class="cu-row-head">
+                <span class="cu-idx">P2</span>
+                <span class="cu-who"><strong>Interlude</strong><i>Scallop, sea buckthorn</i></span>
+                <i class="fa-solid fa-plus cu-plus" aria-hidden="true"></i>
+              </div>
+              <div class="cu-open">
+                <figure class="cu-open-img"><img src="../images/elegant-tablescape-blue-gold.webp" alt="Interlude course plate" /></figure>
+                <p class="cu-open-txt"><strong>Interlude</strong> — seared scallop and sea buckthorn, timed to follow the applause before the main is walked.</p>
+              </div>
+            </div>
+            <div class="cu-row" data-curowe data-img="../images/elegant-catering-service.webp" data-cap="Sweetness, toasted, poured slowly" role="button" tabindex="0" aria-expanded="false">
+              <div class="cu-row-head">
+                <span class="cu-idx">P3</span>
+                <span class="cu-who"><strong>Main</strong><i>Bison loin, smoked jus</i></span>
+                <i class="fa-solid fa-plus cu-plus" aria-hidden="true"></i>
+              </div>
+              <div class="cu-open">
+                <figure class="cu-open-img"><img src="../images/elegant-catering-service.webp" alt="Main course plate" /></figure>
+                <p class="cu-open-txt"><strong>Main</strong> — bison loin with smoked jus and wood-fire aromatics, plated to arrive between keynote blocks.</p>
+              </div>
+            </div>
+            <div class="cu-row" data-curowe data-img="../images/elegant-dinner-setting.webp" data-cap="The quiet final stroke" role="button" tabindex="0" aria-expanded="false">
+              <div class="cu-row-head">
+                <span class="cu-idx">P4</span>
+                <span class="cu-who"><strong>Dessert</strong><i>Honey, chestnut, sea salt</i></span>
+                <i class="fa-solid fa-plus cu-plus" aria-hidden="true"></i>
+              </div>
+              <div class="cu-open">
+                <figure class="cu-open-img"><img src="../images/elegant-dinner-setting.webp" alt="Dessert course plate" /></figure>
+                <p class="cu-open-txt"><strong>Dessert</strong> — honey, chestnut and sea salt over a quiet mousse, the final stroke before doors reopen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 8 — AFTERMOVIE REEL ===================== -->
+    <section class="rl-section" id="reel">
+      <span class="rl-glint" aria-hidden="true"></span>
+
+      <div class="container pyre-head">
+        <div class="section-eyebrow eyebrow-center" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>Aftermovie Reel</span>
+        </div>
+        <h2 class="section-title rl-title" data-aos="fade-up" data-aos-delay="80">
+          Scrub the exit happy <em>frames</em>
+        </h2>
+      </div>
+
+      <div class="rl-stage" id="rlStage">
+        <div class="rl-frames rl-dupe" id="rlFrames">
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/conference-keynote-speaker.webp" alt="Keynote speaker frame 1" />
+            <span class="rl-cap">00:00 &middot; Doors close</span>
+          </figure>
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/dynamic-keynote-moment.webp" alt="Dynamic keynote frame 2" />
+            <span class="rl-cap">00:24 &middot; First reveal</span>
+          </figure>
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/product-launch-stage-audience.webp" alt="Product launch frame 3" />
+            <span class="rl-cap">01:05 &middot; Launch drop</span>
+          </figure>
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/festival-confetti-blast.webp" alt="Confetti moment frame 4" />
+            <span class="rl-cap">01:52 &middot; Confetti</span>
+          </figure>
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/evening-garden-party-lights.webp" alt="Garden lights frame 5" />
+            <span class="rl-cap">02:18 &middot; The garden</span>
+          </figure>
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/ballroom-chandelier-reception-tables.webp" alt="Chandelier room frame 6" />
+            <span class="rl-cap">02:47 &middot; Last dance</span>
+          </figure>
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/audience-celebration-applause.webp" alt="Applause frame 7" />
+            <span class="rl-cap">03:12 &middot; Standing ovation</span>
+          </figure>
+          <figure class="rl-frame" data-rlframe>
+            <img src="../images/event-crew-team-celebration.webp" alt="Crew celebration frame 8" />
+            <span class="rl-cap">03:24 &middot; The crew signs off</span>
+          </figure>
+        </div>
+
+        <div class="rl-scrub" id="rlScrub">
+          <span class="rl-track"><span class="rl-fill" id="rlFill"></span></span>
+          <span class="rl-head" id="rlHead"><i class="fa-solid fa-play"></i></span>
+          <span class="rl-time" id="rlTime">00:00</span>
+          <span class="rl-dur">/ 03:24</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 9 — PRESS & INTERVIEWS ===================== -->
+    <section class="ps-section" id="press">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-eyebrow" data-aos="fade-right">
+              <span class="eyebrow-rule"></span>
+              <span>Press &amp; Interviews</span>
+            </div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="80">
+              What the front row <em>tells the press</em>
+            </h2>
+          </div>
+          <p class="section-desc" data-aos="fade-left">
+            Push past each quote and the room behind it surfaces.
+          </p>
+        </div>
+
+        <div class="ps-rows" id="psRows">
+          <article class="ps-row" data-psrow>
+            <span class="ps-num">I.</span>
+            <div class="ps-quote">
+              <p>&ldquo;Stackly turned a warehouse into a sequence of rooms no one wanted to leave. Real stagecraft.&rdquo;</p>
+              <cite class="ps-src">The Event Journal &middot; Issue 214</cite>
+            </div>
+            <span class="ps-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <figure class="ps-img"><img src="../images/rooftop-evening-gathering.webp" alt="Rooftop evening gathering" /></figure>
+          </article>
+
+          <article class="ps-row" data-psrow>
+            <span class="ps-num">II.</span>
+            <div class="ps-quote">
+              <p>&ldquo;The producers think in timecodes. The room hit the blackout to the second &mdash; twice.&rdquo;</p>
+              <cite class="ps-src">Studio Weekly &middot; The Ops File</cite>
+            </div>
+            <span class="ps-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <figure class="ps-img"><img src="../images/corporate-team-meeting.webp" alt="Corporate team meeting" /></figure>
+          </article>
+
+          <article class="ps-row" data-psrow>
+            <span class="ps-num">III.</span>
+            <div class="ps-quote">
+              <p>&ldquo;Easily the most over-engineered, under-stressed event our C-suite has ever walked into.&rdquo;</p>
+              <cite class="ps-src">Boardroom Review &middot; Field Notes</cite>
+            </div>
+            <span class="ps-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <figure class="ps-img"><img src="../images/elegant-catering-service.webp" alt="Elegant catering service" /></figure>
+          </article>
+
+          <article class="ps-row" data-psrow>
+            <span class="ps-num">IV.</span>
+            <div class="ps-quote">
+              <p>&ldquo;Twelve cities on one visual system. It read as a single global premiere, not a tour.&rdquo;</p>
+              <cite class="ps-src">Forbes Events Desk &middot; 2026</cite>
+            </div>
+            <span class="ps-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <figure class="ps-img"><img src="../images/festival-celebration-burst.webp" alt="Festival celebration burst" /></figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 10 — THE GAUGES ===================== -->
+    <section class="gg-section" id="gauges">
+      <span class="gg-orb" aria-hidden="true"></span>
+
+      <div class="container gg-inner">
+        <div class="section-eyebrow eyebrow-center" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>Season Gauges</span>
+        </div>
+        <h2 class="section-title gg-title" data-aos="fade-up" data-aos-delay="80">
+          The dials we watch <em>all season</em>
+        </h2>
+
+        <div class="gg-board">
+          <div class="gg-core" data-aos="zoom-in">
+            <img src="../images/gleaming-victory-trophy.webp" alt="Victory trophy" />
+            <span class="gg-core-cap"><i class="fa-solid fa-award"></i> Season pulse</span>
+          </div>
+
+          <div class="gg-dial" data-ggdial data-p="100">
+            <span class="gg-icon"><i class="fa-solid fa-house-fire"></i></span>
+            <strong class="gg-num" data-count="100" data-suffix="%">0</strong>
+            <span class="gg-label">Rooms sold out</span>
+          </div>
+          <div class="gg-dial" data-ggdial data-p="96">
+            <span class="gg-icon"><i class="fa-solid fa-star"></i></span>
+            <strong class="gg-num" data-count="96" data-suffix="%">0</strong>
+            <span class="gg-label">Exits say "would rebook"</span>
+          </div>
+          <div class="gg-dial" data-ggdial data-p="82">
+            <span class="gg-icon"><i class="fa-solid fa-mountain"></i></span>
+            <strong class="gg-num" data-count="82" data-suffix="%">0</strong>
+            <span class="gg-label">Media lift vs. baseline</span>
+          </div>
+          <div class="gg-dial" data-ggdial data-p="74">
+            <span class="gg-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+            <strong class="gg-num" data-count="74" data-suffix="h">0</strong>
+            <span class="gg-label">Avg. planning runway</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 11 — REQUEST A PASS ===================== -->
+    <section class="px-section" id="pass">
+      <span class="px-glow" aria-hidden="true"></span>
+
+      <div class="container px-wrap">
+        <div class="px-aside" data-aos="fade-up">
+          <div class="section-eyebrow">
+            <span class="eyebrow-rule"></span>
+            <span>Request a Pass</span>
+          </div>
+          <h2 class="px-title" data-aos="fade-up" data-aos-delay="80">
+            One <em>unmarked seat</em> is yours
+          </h2>
+          <p class="px-copy" data-aos="fade-up" data-aos-delay="160">
+            Tell the desk which premiere tempts you &mdash; and the room looks
+            after the rest. Passes are limited to a few dozen per event.
+          </p>
+          <ul class="px-perks" data-aos="fade-up" data-aos-delay="240">
+            <li><i class="fa-solid fa-circle-check"></i> Front-of-house access &amp; run-of-show</li>
+            <li><i class="fa-solid fa-circle-check"></i> Producer-led tour before doors</li>
+            <li><i class="fa-solid fa-circle-check"></i> Aftermovie &amp; photo gallery by delivery</li>
+          </ul>
+        </div>
+
+        <div class="px-ticket" data-aos="zoom-in" data-aos-delay="200">
+          <div class="px-head">
+            <img src="../images/evening-rooftop-party.webp" alt="Evening rooftop party" />
+            <div class="px-head-in">
+              <span class="px-stub">Stackly &middot; Pass 026</span>
+              <span class="px-date">THE SEASON &middot; MMXXVI</span>
+            </div>
+            <span class="px-perf" aria-hidden="true"><i class="fa-regular fa-ticket"></i></span>
+          </div>
+          <div class="px-notch-row" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <div class="px-body">
+            <form class="px-form" id="pxForm" novalidate>
+              <div class="px-field">
+                <label for="pxEmail">Work email</label>
+                <div class="px-input" id="pxEmailWrap">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" id="pxEmail" name="pxEmail" placeholder="you@company.com" autocomplete="email" />
+                </div>
+                <span class="px-err" id="pxErrEmail" role="alert">Please enter valid mail ID.</span>
+              </div>
+              <div class="px-field">
+                <label for="pxShow">Prefer a premiere</label>
+                <select id="pxShow" name="pxShow">
+                  <option value="" disabled selected>Choose a premiere</option>
+                  <option>The Midnight Gala</option>
+                  <option>The Founder&rsquo;s Summit</option>
+                  <option>The Orchid Reception</option>
+                  <option>Just surprise me</option>
+                </select>
+                <span class="px-err" id="pxErrShow" role="alert">Please select.</span>
+              </div>
+              <button type="submit" class="btn btn-gold stripes-btn" id="pxSend">
+                <span class="btn-label">Request my pass</span>
+                <i class="fa-solid fa-right-to-bracket"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== SECTION 12 — FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand" data-footer-col>
+        <a href="../index.html" aria-label="Stackly home"><img src="../images/logo-full.webp" alt="Stackly" class="footer-logo" /></a>
+        <p>
+          Stackly is a corporate event management studio producing conferences,
+          galas and launches with editorial taste and operational rigor.
+        </p>
+        <div class="footer-socials">
+          <a href="404.html" class="fsq" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="fsq" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="fsq" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html" class="fsq" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col" data-footer-col>
+        <h4>Company</h4>
+        <a href="../index.html" class="flink"><span>Home</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="services.html" class="flink"><span>Services</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="events.html" class="flink"><span>Event</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="about.html" class="flink"><span>About</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="flink"><span>Contact</span><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="footer-col footer-contact" data-footer-col>
+        <h4>Contact</h4>
+        <div class="f-contact">
+          <span class="f-contact-line"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          <span class="f-contact-line"><i class="fa-solid fa-envelope"></i> info@stackly.com</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-news" data-footer-col>
+        <h4>The Brief</h4>
+        <p>Monthly field notes on event craft. No spam, unsubscribe anytime.</p>
+        <form class="news-form" id="newsForm" novalidate>
+          <input type="email" id="newsEmail" placeholder="Work email" aria-label="Email address" />
+          <button type="submit" class="news-btn stripes-btn" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <p class="news-note" id="newsNote"></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container fb-inner">
+        <span>© 2026 Stackly. All rights reserved.</span>
+        <div class="fb-links">
+          <a href="404.html">Privacy</a>
+          <a href="404.html">Terms</a>
+          <button class="back-top" id="backTop" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="../JS/event.js"></script>
+
+  <script src="../JS/preloader.js"></script>
+</body>
+</html>

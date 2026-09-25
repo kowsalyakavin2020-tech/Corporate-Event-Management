@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — Stackly Corporate Event Management</title>
+  <meta name="description" content="Create your Stackly account — full name, email, password and role. Join the corporate event stack." />
+  <link rel="icon" href="../images/logo-icon.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../CSS/auth.css" />
+
+  <link rel="stylesheet" href="../CSS/preloader.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-inner">
+      <img class="pl-logo" src="../images/logo-full.webp" alt="Stackly" />
+      <div class="pl-icons">
+        <i class="fa-solid fa-sun pl-icon"></i>
+        <i class="fa-solid fa-moon pl-icon"></i>
+        <i class="fa-solid fa-gears pl-icon"></i>
+        <i class="fa-solid fa-crown pl-icon"></i>
+        <i class="fa-solid fa-award pl-icon"></i>
+      </div>
+      <div class="pl-loader"><span></span></div>
+      <p class="pl-loading">Loading</p>
+    </div>
+  </div>
+
+  <main class="auth-shell" id="authShell">
+
+    <!-- ===================== IMAGE SIDE ===================== -->
+    <section class="auth-media" id="authMedia" aria-hidden="true">
+      <figure class="auth-media-frame">
+        <img src="../images/chandelier-lit-gala-hall.webp" alt="Chandelier lit gala hall hosted by Stackly" />
+      </figure>
+      <div class="auth-media-veil"></div>
+
+      <a href="../index.html" class="auth-home auth-home-media" id="authHome">
+        <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+        <span class="auth-home-label">Back to Home</span>
+      </a>
+
+      <div class="am-chip am-chip-a">
+        <i class="fa-solid fa-gears" aria-hidden="true"></i>
+        <span>End-to-end production</span>
+      </div>
+      <div class="am-chip am-chip-b">
+        <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
+        <span>Global delivery</span>
+      </div>
+      <div class="am-chip am-chip-c">
+        <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+        <span>Trusted partners</span>
+      </div>
+
+      <div class="auth-media-quote">
+        <p class="am-quote">&ldquo;Every great event starts on the stack.&rdquo;</p>
+        <p class="am-quote-sub">Create an account and join the Stackly team.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FORM SIDE ===================== -->
+    <section class="auth-form" id="authForm">
+
+      <a href="../index.html" class="auth-logo" id="authLogo" aria-label="Stackly home">
+        <img src="../images/logo-full.webp" alt="Stackly" />
+      </a>
+
+      <header class="auth-head">
+        <p class="auth-kicker">New to the stack?</p>
+        <h1 class="auth-title" id="authTitle">Create your account</h1>
+        <p class="auth-sub">Set up your access in under a minute.</p>
+      </header>
+
+      <form class="auth-frm" id="signupForm" novalidate>
+
+        <div class="fld" data-field="name">
+          <label for="signupName">Full name</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-user fld-ico" aria-hidden="true"></i>
+            <input id="signupName" name="name" type="text" placeholder="Your full name" autocomplete="name" aria-invalid="false" />
+          </div>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld" data-field="email">
+          <label for="signupEmail">Email address</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-envelope fld-ico" aria-hidden="true"></i>
+            <input id="signupEmail" name="email" type="email" placeholder="you@gmail.com" autocomplete="email" aria-invalid="false" />
+          </div>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld" data-field="password">
+          <label for="signupPassword">Create Password</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-lock fld-ico" aria-hidden="true"></i>
+            <input id="signupPassword" name="password" type="password" placeholder="Create a strong password" autocomplete="new-password" aria-invalid="false" />
+            <button type="button" class="fld-eye" data-eye aria-label="Show password">
+              <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="strength" data-strength>
+            <div class="strength-bar" id="strengthBar" aria-hidden="true">
+              <span class="str-seg"></span><span class="str-seg"></span>
+              <span class="str-seg"></span><span class="str-seg"></span>
+              <span class="str-seg"></span>
+            </div>
+            <p class="strength-meta">
+              <span class="strength-label" data-strength-label>Password strength</span>
+              <span class="strength-pct" data-strength-pct>0&#47;5</span>
+            </p>
+          </div>
+          <ul class="pw-rules" data-pw-rules>
+            <li data-rule="len">8+ characters</li>
+            <li data-rule="upper">One uppercase letter</li>
+            <li data-rule="lower">One lowercase letter</li>
+            <li data-rule="num">One number</li>
+            <li data-rule="spec">One special character</li>
+          </ul>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld" data-field="confirm">
+          <label for="signupConfirm">Confirm Password</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-lock fld-ico" aria-hidden="true"></i>
+            <input id="signupConfirm" name="confirm" type="password" placeholder="Re-enter your password" autocomplete="new-password" aria-invalid="false" />
+            <button type="button" class="fld-eye" data-eye aria-label="Show password">
+              <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            </button>
+          </div>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld" data-field="role">
+          <label for="signupRole">Role</label>
+          <div class="fld-ctl">
+            <i class="fa-solid fa-id-badge fld-ico" aria-hidden="true"></i>
+            <select id="signupRole" name="role" aria-invalid="false">
+              <option value="">Select your role</option>
+              <option value="organizer">Organizer</option>
+              <option value="guest">Guest</option>
+            </select>
+            <i class="fa-solid fa-chevron-down fld-caret" aria-hidden="true"></i>
+          </div>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <div class="fld" data-field="terms">
+          <label class="fld-check fld-check-terms">
+            <input type="checkbox" id="signupTerms" name="terms" />
+            <span class="fld-checkbox" aria-hidden="true">
+              <i class="fa-solid fa-check" aria-hidden="true"></i>
+            </span>
+            <span class="fld-check-label">I agree to the <a href="./404.html" class="fld-inline-link">Terms</a> and <a href="./404.html" class="fld-inline-link">Privacy Policy</a></span>
+          </label>
+          <p class="fld-err" data-err></p>
+        </div>
+
+        <button type="submit" class="btn btn-gold stripes-btn btn-magnetic auth-submit" id="signupSubmit" data-magnetic>
+          <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+          <span class="btn-label">Create Account</span>
+        </button>
+
+        <div class="alt-divider"><span>or</span></div>
+
+        <a href="./404.html"><button type="button" class="btn btn-ghost btn-conic btn-magnetic auth-google" id="googleSignup">
+          <i class="fa-brands fa-google" aria-hidden="true"></i>
+          <span class="btn-label">Continue with Google</span>
+        </button></a>
+
+      </form>
+
+      <p class="auth-switch">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+
+      <div class="auth-toast" id="authToast" role="status" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="../JS/auth.js"></script>
+
+  <script src="../JS/preloader.js"></script>
+</body>
+</html>

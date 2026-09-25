@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Corporate Event Management</title>
+  <meta name="description" content="Stackly crafts premium corporate events, conferences, galas and product launches with flawless execution." />
+  <link rel="icon" href="images/logo-icon.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="CSS/landing.css" />
+
+  <link rel="stylesheet" href="CSS/preloader.css" />
+</head>
+<body>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pl-inner">
+      <img class="pl-logo" src="images/logo-full.webp" alt="Stackly" />
+      <div class="pl-icons">
+        <i class="fa-solid fa-sun pl-icon"></i>
+        <i class="fa-solid fa-moon pl-icon"></i>
+        <i class="fa-solid fa-gears pl-icon"></i>
+        <i class="fa-solid fa-crown pl-icon"></i>
+        <i class="fa-solid fa-award pl-icon"></i>
+      </div>
+      <div class="pl-loader"><span></span></div>
+      <p class="pl-loading">Loading</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== SECTION 1 — HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand" id="brandHome" aria-label="Stackly home">
+        <img src="images/logo-full.webp" alt="Stackly" class="brand-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link is-active" data-wave>Home</a>
+        <a href="HTML/services.html" class="nav-link">Services</a>
+        <a href="HTML/events.html" class="nav-link" data-wave>Event</a>
+        <a href="HTML/about.html" class="nav-link" data-wave>About</a>
+        <a href="HTML/contact.html" class="nav-link" data-wave>Contact</a>
+      </nav>
+
+      <a href="HTML/login.html" class="btn btn-gold header-cta stripes-btn">
+        <span class="btn-label">Login</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE FULLSCREEN MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-head">
+      <a href="index.html" aria-label="Stackly home"><img src="images/logo-full.webp" alt="Stackly" class="mm-logo" /></a>
+      <button class="mm-close" id="mmClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mm-nav" aria-label="Mobile">
+      <a href="index.html" class="mm-link is-active"><span class="mm-num">01</span><span class="mm-label">Home</span></a>
+      <a href="HTML/services.html" class="mm-link"><span class="mm-num">02</span><span class="mm-label">Services</span></a>
+      <a href="HTML/events.html" class="mm-link"><span class="mm-num">03</span><span class="mm-label">Event</span></a>
+      <a href="HTML/about.html" class="mm-link"><span class="mm-num">04</span><span class="mm-label">About</span></a>
+      <a href="HTML/contact.html" class="mm-link"><span class="mm-num">05</span><span class="mm-label">Contact</span></a>
+      <a href="HTML/login.html" class="mm-link mm-login">
+        <span class="mm-num"><i class="fa-solid fa-right-to-bracket"></i></span>
+        <span class="mm-label">Login</span>
+      </a>
+    </nav>
+    <div class="mm-foot">
+      <div class="mm-socials">
+        <a href="#" class="mm-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="mm-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="mm-soc" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="mm-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <p class="mm-contact"><i class="fa-solid fa-envelope"></i> info@stackly.com</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===================== SECTION 2 — HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img class="hero-bg-img" src="images/elegant-ballroom-event.webp" alt="Elegant ballroom event" />
+        <div class="hero-bg-scrim"></div>
+      </div>
+
+      <div class="hero-grid-lines" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="container hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-rule"></span>
+          <span>Corporate Event Management</span>
+        </div>
+
+        <h1 class="hero-title" data-split-words>
+          We engineer events that echo beyond the room
+        </h1>
+
+        <p class="hero-sub">
+          From boardroom summits to stadium-scale launches, Stackly designs and
+          produces premium experiences with military-grade logistics and
+          unmistakable style.
+        </p>
+
+        <div class="hero-actions">
+          <a href="HTML/404.html" class="btn btn-gold btn-magnetic stripes-btn" data-magnetic>
+            <span class="btn-label">Start Planning</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="HTML/404.html" class="btn btn-ghost btn-conic">
+            <span class="btn-label">Explore Our Work</span>
+            <i class="fa-regular fa-circle-play"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="container hero-stats-row">
+        <div class="hero-stat" data-hover-roll>
+          <strong data-count="850" data-suffix="+">0</strong>
+          <span>Events Delivered</span>
+        </div>
+        <div class="hero-stat" data-hover-roll>
+          <strong data-count="40" data-suffix="+">0</strong>
+          <span>Cities Worldwide</span>
+        </div>
+        <div class="hero-stat" data-hover-roll>
+          <strong data-count="98" data-suffix="%">0</strong>
+          <span>Client Retention</span>
+        </div>
+      </div>
+
+      <div class="hero-accent-b" data-parallax="-0.05">
+        <i class="fa-solid fa-star"></i>
+        <div>
+          <strong>4.9 / 5</strong>
+          <span>Avg. sponsor rating</span>
+        </div>
+      </div>
+
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="hero-marquee-track" id="heroMarquee">
+          <span>Conferences</span><i class="fa-solid fa-asterisk"></i>
+          <span>Galas</span><i class="fa-solid fa-asterisk"></i>
+          <span>Product Launches</span><i class="fa-solid fa-asterisk"></i>
+          <span>Award Nights</span><i class="fa-solid fa-asterisk"></i>
+          <span>Roadshows</span><i class="fa-solid fa-asterisk"></i>
+          <span>Retreats</span><i class="fa-solid fa-asterisk"></i>
+          <span>Conferences</span><i class="fa-solid fa-asterisk"></i>
+          <span>Galas</span><i class="fa-solid fa-asterisk"></i>
+          <span>Product Launches</span><i class="fa-solid fa-asterisk"></i>
+          <span>Award Nights</span><i class="fa-solid fa-asterisk"></i>
+          <span>Roadshows</span><i class="fa-solid fa-asterisk"></i>
+          <span>Retreats</span><i class="fa-solid fa-asterisk"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 3 — ABOUT ===================== -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-img-main slice-img" data-slice="images/corporate-team-meeting.webp" data-slice-count="5"></div>
+
+          <div class="about-img-sub" data-parallax="0.08">
+            <img src="images/moodboard-flatlay-planning-table.webp" alt="Event planning moodboard" />
+          </div>
+
+          <div class="about-badge" data-hover-bounce>
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <strong>12</strong>
+              <span>Years of<br />Mastery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="section-eyebrow" data-aos="fade-right">
+            <span class="eyebrow-rule"></span>
+            <span>Who We Are</span>
+          </div>
+
+          <h2 class="section-title" data-split-words>
+            Precision planning. <em>Staged</em> with soul.
+          </h2>
+
+          <p data-aos="fade-up">
+            Stackly is a full-spectrum corporate event management studio. We take
+            ownership of the entire journey — strategy, creative, production,
+            hospitality and post-event intelligence — so your brand only ever
+            experiences the highlight reel.
+          </p>
+
+          <p data-aos="fade-up" data-aos-delay="120">
+            Our producers, designers and technical directors have delivered
+            flagship moments for Fortune 500 boardrooms, global summits and
+            culture-shifting product reveals.
+          </p>
+
+          <ul class="about-list">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Dedicated producer from brief to breakdown
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              In-house creative, AV and staging teams
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Transparent budgets, zero surprise line-items
+            </li>
+          </ul>
+
+          <a href="HTML/404.html" class="btn btn-artisan">
+            <span class="btn-label">See How We Work</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="about-ticker" aria-hidden="true">
+        <div class="about-ticker-track" id="aboutTicker">
+          <span>Strategy</span><i class="fa-solid fa-diamond"></i>
+          <span>Creative</span><i class="fa-solid fa-diamond"></i>
+          <span>Production</span><i class="fa-solid fa-diamond"></i>
+          <span>Hospitality</span><i class="fa-solid fa-diamond"></i>
+          <span>Logistics</span><i class="fa-solid fa-diamond"></i>
+          <span>Legacy</span><i class="fa-solid fa-diamond"></i>
+          <span>Strategy</span><i class="fa-solid fa-diamond"></i>
+          <span>Creative</span><i class="fa-solid fa-diamond"></i>
+          <span>Production</span><i class="fa-solid fa-diamond"></i>
+          <span>Hospitality</span><i class="fa-solid fa-diamond"></i>
+          <span>Logistics</span><i class="fa-solid fa-diamond"></i>
+          <span>Legacy</span><i class="fa-solid fa-diamond"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 4 — SERVICES / WHAT WE DO ===================== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-eyebrow" data-aos="fade-right">
+              <span class="eyebrow-rule"></span>
+              <span>What We Do</span>
+            </div>
+            <h2 class="section-title" data-split-words>
+              Services built for <em>high-stakes</em> rooms
+            </h2>
+          </div>
+          <p class="section-desc" data-aos="fade-left">
+            Six core practices, one accountable team. Hover a service to preview
+            what it looks like on the ground.
+          </p>
+        </div>
+
+        <div class="services-showcase">
+          <div class="services-list" id="servicesList">
+            <article class="sv-item is-active" data-svc data-img="images/conference-keynote-speaker.webp">
+              <span class="sv-num">01</span>
+              <div class="sv-main">
+                <h3>Conferences &amp; Summits</h3>
+                <p>Multi-track agendas, speaker programs and delegate journeys engineered for hundreds or thousands.</p>
+              </div>
+              <span class="sv-go"><i class="fa-solid fa-arrow-up-right"></i></span>
+            </article>
+
+            <article class="sv-item" data-svc data-img="images/product-launch-stage-audience.webp">
+              <span class="sv-num">02</span>
+              <div class="sv-main">
+                <h3>Product Launches</h3>
+                <p>Reveal moments with theatrical builds, embargo-safe ops and press-ready content capture.</p>
+              </div>
+              <span class="sv-go"><i class="fa-solid fa-arrow-up-right"></i></span>
+            </article>
+
+            <article class="sv-item" data-svc data-img="images/chandelier-lit-gala-hall.webp">
+              <span class="sv-num">03</span>
+              <div class="sv-main">
+                <h3>Galas &amp; Award Nights</h3>
+                <p>Black-tie choreography, dinner theatre sequencing and sponsor moments that land on cue.</p>
+              </div>
+              <span class="sv-go"><i class="fa-solid fa-arrow-up-right"></i></span>
+            </article>
+
+            <article class="sv-item" data-svc data-img="images/evening-garden-party-lights.webp">
+              <span class="sv-num">04</span>
+              <div class="sv-main">
+                <h3>Retreats &amp; Offsites</h3>
+                <p>Culture-first offsites pairing strategic workshops with experiences teams actually remember.</p>
+              </div>
+              <span class="sv-go"><i class="fa-solid fa-arrow-up-right"></i></span>
+            </article>
+
+            <article class="sv-item" data-svc data-img="images/city-rooftop-party-dusk.webp">
+              <span class="sv-num">05</span>
+              <div class="sv-main">
+                <h3>Roadshows &amp; Activations</h3>
+                <p>Modular touring kits and brand activations that stay consistent across every city stop.</p>
+              </div>
+              <span class="sv-go"><i class="fa-solid fa-arrow-up-right"></i></span>
+            </article>
+
+            <article class="sv-item" data-svc data-img="images/dynamic-keynote-moment.webp">
+              <span class="sv-num">06</span>
+              <div class="sv-main">
+                <h3>Hybrid &amp; Virtual Events</h3>
+                <p>Studio-grade streams, interactive platforms and global watch parties with the same Stackly polish.</p>
+              </div>
+              <span class="sv-go"><i class="fa-solid fa-arrow-up-right"></i></span>
+            </article>
+          </div>
+
+          <div class="services-preview" data-spotlight>
+            <div class="sv-preview-frame">
+              <img class="sv-shot" src="images/conference-keynote-speaker.webp" alt="Conferences and summits" />
+            </div>
+            <div class="sv-cap">
+              <span>Featured Practice</span>
+              <strong class="sv-cap-title">Conferences &amp; Summits</strong>
+            </div>
+            <span class="sv-stamp" aria-hidden="true">Stackly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 5 — SELECTED WORK ===================== -->
+    <section class="portfolio" id="work">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <div class="section-eyebrow eyebrow-center" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>Selected Work</span>
+          </div>
+          <h2 class="section-title" data-split-words>
+            Moments we <em>manufactured</em>
+          </h2>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card work-hero" data-work data-parallax="0.05">
+            <div class="wc-media">
+              <img src="images/chandelier-lit-gala-hall.webp" alt="Chandelier lit gala hall" />
+            </div>
+            <div class="wc-veil"></div>
+            <div class="wc-body">
+              <span class="wc-cat">Gala · Finance</span>
+              <h3>Aurum Capital Annual Awards</h3>
+              <p>1,200 guests · Sydney Opera House</p>
+            </div>
+            <span class="wc-num">01</span>
+            <span class="wc-more"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
+
+          <article class="work-card" data-work>
+            <div class="wc-media">
+              <img src="images/product-launch-stage-audience.webp" alt="Product launch stage audience" />
+            </div>
+            <div class="wc-veil"></div>
+            <div class="wc-body">
+              <span class="wc-cat">Launch · Tech</span>
+              <h3>Northwire Vertex Reveal</h3>
+              <p>Global livestream · 38 countries</p>
+            </div>
+            <span class="wc-num">02</span>
+          </article>
+
+          <article class="work-card" data-work>
+            <div class="wc-media">
+              <img src="images/city-rooftop-party-dusk.webp" alt="City rooftop party at dusk" />
+            </div>
+            <div class="wc-veil"></div>
+            <div class="wc-body">
+              <span class="wc-cat">Activation · Retail</span>
+              <h3>Skyline Summer Soirée</h3>
+              <p>Rooftop takeover · 600 guests</p>
+            </div>
+            <span class="wc-num">03</span>
+          </article>
+
+          <article class="work-card work-wide" data-work data-parallax="0.04">
+            <div class="wc-media">
+              <img src="images/tent-string-lights-night-event.webp" alt="Tent with string lights night event" />
+            </div>
+            <div class="wc-veil"></div>
+            <div class="wc-body">
+              <span class="wc-cat">Retreat · Pharma</span>
+              <h3>Helix Leadership Escape</h3>
+              <p>Country estate · 3 days</p>
+            </div>
+            <span class="wc-num">04</span>
+          </article>
+
+          <article class="work-card" data-work data-parallax="-0.04">
+            <div class="wc-media">
+              <img src="images/elegant-tablescape-blue-gold.webp" alt="Elegant blue and gold tablescape" />
+            </div>
+            <div class="wc-veil"></div>
+            <div class="wc-body">
+              <span class="wc-cat">Dinner · Luxury</span>
+              <h3>Maison Blue Dinner Series</h3>
+              <p>Invitation-only · 180 seats</p>
+            </div>
+            <span class="wc-num">05</span>
+          </article>
+
+          <article class="work-card work-banner" data-work>
+            <div class="wc-media">
+              <img src="images/evening-garden-party-lights.webp" alt="Evening garden party lights" />
+            </div>
+            <div class="wc-veil"></div>
+            <div class="wc-body">
+              <span class="wc-cat">Celebration · Heritage</span>
+              <h3>Turnbull &amp; Sons Centenary</h3>
+              <p>Garden fete · 900 guests</p>
+            </div>
+            <span class="wc-num">06</span>
+          </article>
+        </div>
+
+        <div class="work-cta" data-aos="fade-up">
+          <a href="HTML/404.html" class="btn btn-ghost btn-conic">
+            <span class="btn-label">View Case Study</span>
+            <i class="fa-solid fa-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 6 — EVENT TYPES (HORIZONTAL) ===================== -->
+    <section class="categories" id="events">
+      <div class="cat-pin" id="catPin">
+        <div class="cat-track" id="catTrack">
+          <div class="cat-intro">
+            <div class="section-eyebrow">
+              <span class="eyebrow-rule"></span>
+              <span>Event Types</span>
+            </div>
+            <h2 class="section-title">
+              Five arenas.<br /><em>One</em> standard.
+            </h2>
+            <p>Drag or scroll to explore the formats we run most often.</p>
+            <div class="cat-intro-media" data-parallax="0.05">
+              <img src="images/empty-ballroom-grand-hall.webp" alt="Empty grand ballroom hall" />
+            </div>
+            <div class="cat-chips">
+              <span><i class="fa-solid fa-briefcase"></i> 850+ mandates</span>
+              <span><i class="fa-solid fa-earth-americas"></i> 40+ cities</span>
+              <span><i class="fa-solid fa-trophy"></i> 60+ awards</span>
+            </div>
+            <div class="cat-hint"><i class="fa-solid fa-arrow-right-long"></i></div>
+          </div>
+
+          <article class="cat-panel">
+            <img class="cp-img" src="images/dynamic-keynote-moment.webp" alt="Speaker on stage at a conference" />
+            <span class="cp-num">01</span>
+            <div class="cp-badge"><i class="fa-solid fa-users-viewfinder"></i></div>
+            <div class="cp-body">
+              <h3>Conferences</h3>
+              <p>Agenda architecture, speaker ops, breakouts and expo floors that keep delegates moving.</p>
+              <a href="HTML/404.html" class="cp-link">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="cat-panel">
+            <img class="cp-img" src="images/opulent-dinner-gathering.webp" alt="Opulent gala dinner gathering" />
+            <span class="cp-num">02</span>
+            <div class="cp-badge"><i class="fa-solid fa-utensils"></i></div>
+            <div class="cp-body">
+              <h3>Galas &amp; Dinners</h3>
+              <p>Menus, mise-en-scène and moment-timing for rooms where every course is choreographed.</p>
+              <a href="HTML/404.html" class="cp-link">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="cat-panel">
+            <img class="cp-img" src="images/concert-stage-professional-lighting.webp" alt="Launch concert stage lighting" />
+            <span class="cp-num">03</span>
+            <div class="cp-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="cp-body">
+              <h3>Launches</h3>
+              <p>Build reveals, embargo control and content engines that turn one night into a quarter of media.</p>
+              <a href="HTML/404.html" class="cp-link">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="cat-panel">
+            <img class="cp-img" src="images/event-crew-team-celebration.webp" alt="Event crew team celebrating" />
+            <span class="cp-num">04</span>
+            <div class="cp-badge"><i class="fa-solid fa-handshake"></i></div>
+            <div class="cp-body">
+              <h3>Retreats</h3>
+              <p>Offsites that balance hard strategy sessions with the kind of release people talk about later.</p>
+              <a href="HTML/404.html" class="cp-link">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="cat-panel">
+            <img class="cp-img" src="images/festival-confetti-blast.webp" alt="Festival confetti celebration" />
+            <span class="cp-num">05</span>
+            <div class="cp-badge"><i class="fa-solid fa-ticket"></i></div>
+            <div class="cp-body">
+              <h3>Celebrations</h3>
+              <p>Anniversaries, milestones and culture moments produced with the same rigor as a board meeting.</p>
+              <a href="HTML/404.html" class="cp-link">Enquire <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 7 — STATS ===================== -->
+    <section class="stats" id="stats">
+      <div class="stats-bg">
+        <img src="images/concert-stage-spotlights-crowd.webp" alt="Stage spotlights over crowd" />
+      </div>
+      <div class="stats-overlay"></div>
+
+      <div class="container stats-inner">
+        <div class="section-eyebrow eyebrow-light" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>By The Numbers</span>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat" data-hover-roll data-aos="fade-up">
+            <div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <strong class="stat-num" data-count="850" data-suffix="+">0</strong>
+            <span class="stat-label">Events delivered since 2012</span>
+          </div>
+          <div class="stat" data-hover-roll data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-icon"><i class="fa-solid fa-earth-americas"></i></div>
+            <strong class="stat-num" data-count="40" data-suffix="+">0</strong>
+            <span class="stat-label">Cities across five continents</span>
+          </div>
+          <div class="stat" data-hover-roll data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <strong class="stat-num" data-count="1200" data-suffix="+">0</strong>
+            <span class="stat-label">Delegates at our largest summit</span>
+          </div>
+          <div class="stat" data-hover-roll data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-icon"><i class="fa-solid fa-rotate-left"></i></div>
+            <strong class="stat-num" data-count="98" data-suffix="%">0</strong>
+            <span class="stat-label">Clients who re-brief us</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 8 — PROCESS ===================== -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <div class="section-eyebrow eyebrow-center" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>The Process</span>
+          </div>
+          <h2 class="section-title" data-split-words>
+            Five moves from <em>brief</em> to legacy
+          </h2>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline-rail"><span class="timeline-fill" id="timelineFill"></span></div>
+
+          <article class="tl-step" data-step>
+            <span class="tl-dot"><i class="fa-solid fa-1"></i></span>
+            <div class="tl-card">
+              <div class="tl-thumb">
+                <img src="images/moodboard-flatlay-planning-table.webp" alt="Planning moodboard flatlay" />
+                <span class="tl-ring"></span>
+              </div>
+              <div class="tl-body">
+                <span class="tl-num">01</span>
+                <h3>Discovery</h3>
+                <p>We interrogate the brief, the audience and the business outcome before a single mood board exists.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-step tl-right" data-step>
+            <span class="tl-dot"><i class="fa-solid fa-2"></i></span>
+            <div class="tl-card">
+              <div class="tl-thumb">
+                <img src="images/elegant-tablescape-blue-gold.webp" alt="Blue and gold tablescape design" />
+                <span class="tl-ring"></span>
+              </div>
+              <div class="tl-body">
+                <span class="tl-num">02</span>
+                <h3>Design</h3>
+                <p>Creative direction, spatial design and run-of-show are drafted, costed and signed off in one pass.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-step" data-step>
+            <span class="tl-dot"><i class="fa-solid fa-3"></i></span>
+            <div class="tl-card">
+              <div class="tl-thumb">
+                <img src="images/stage-setup-crew-day.webp" alt="Crew setting up stage" />
+                <span class="tl-ring"></span>
+              </div>
+              <div class="tl-body">
+                <span class="tl-num">03</span>
+                <h3>Production</h3>
+                <p>Fabrication, AV, catering and staffing are locked with contingency layered into every critical path.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-step tl-right" data-step>
+            <span class="tl-dot"><i class="fa-solid fa-4"></i></span>
+            <div class="tl-card">
+              <div class="tl-thumb">
+                <img src="images/audience-celebration-applause.webp" alt="Audience celebrating with applause" />
+                <span class="tl-ring"></span>
+              </div>
+              <div class="tl-body">
+                <span class="tl-num">04</span>
+                <h3>Execution</h3>
+                <p>Show-call precision on the day, with a producer on comms and a fixer beside every stakeholder.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-step" data-step>
+            <span class="tl-dot"><i class="fa-solid fa-5"></i></span>
+            <div class="tl-card">
+              <div class="tl-thumb">
+                <img src="images/partnership-handshake-deal.webp" alt="Partnership handshake" />
+                <span class="tl-ring"></span>
+              </div>
+              <div class="tl-body">
+                <span class="tl-num">05</span>
+                <h3>Legacy</h3>
+                <p>Post-event reporting, content delivery and a debrief that makes the next brief sharper than the last.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 9 — TEAM ===================== -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-eyebrow" data-aos="fade-right">
+              <span class="eyebrow-rule"></span>
+              <span>The Team</span>
+            </div>
+            <h2 class="section-title" data-split-words>
+              Producers you'll <em>actually</em> reach
+            </h2>
+          </div>
+          <p class="section-desc" data-aos="fade-left">
+            Senior people stay on your account — from the first site visit to
+            the final load-out truck.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card" data-team-card>
+            <div class="tc-media">
+              <img src="images/man-headshot-navy-suit.webp" alt="Marcus Ellery" />
+              <div class="tc-reveal">
+                <p>Former broadcast producer turned founder. Marcus has called shows for audiences north of 10,000.</p>
+                <div class="tc-socials">
+                  <a href="HTML/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="HTML/404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="HTML/404.html" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="tc-info">
+              <h3>Marcus Ellery</h3>
+              <span>Founder &amp; CEO</span>
+            </div>
+          </article>
+
+          <article class="team-card team-card-offset" data-team-card>
+            <div class="tc-media">
+              <img src="images/woman-headshot-white-blazer.webp" alt="Sofia Reyes" />
+              <div class="tc-reveal">
+                <p>Sofia builds production bibles so detailed that weather becomes a footnote, not a crisis.</p>
+                <div class="tc-socials">
+                  <a href="HTML/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="HTML/404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="HTML/404.html" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="tc-info">
+              <h3>Sofia Reyes</h3>
+              <span>Head of Production</span>
+            </div>
+          </article>
+
+          <article class="team-card" data-team-card>
+            <div class="tc-media">
+              <img src="images/man-headshot-gray-suit.webp" alt="David Kwan" />
+              <div class="tc-reveal">
+                <p>David directs the look and feel — from typographic systems to the exact kelvin of a spotlight.</p>
+                <div class="tc-socials">
+                  <a href="HTML/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="HTML/404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="HTML/404.html" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="tc-info">
+              <h3>David Kwan</h3>
+              <span>Creative Director</span>
+            </div>
+          </article>
+
+          <article class="team-card team-card-offset" data-team-card>
+            <div class="tc-media">
+              <img src="images/woman-headshot-black-blazer.webp" alt="Amara Cole" />
+              <div class="tc-reveal">
+                <p>Amara owns client partnerships and is the reason 98% of our clients re-brief us.</p>
+                <div class="tc-socials">
+                  <a href="HTML/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="HTML/404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="HTML/404.html" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="tc-info">
+              <h3>Amara Cole</h3>
+              <span>Client Partnerships</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 10 — TESTIMONIALS ===================== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <div class="section-eyebrow eyebrow-center" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>Testimonials</span>
+          </div>
+          <h2 class="section-title" data-split-words>
+            Words from the <em>front row</em>
+          </h2>
+        </div>
+
+        <div class="tm-stage">
+          <span class="tm-orbit tm-orbit-a" aria-hidden="true"><i class="fa-solid fa-star"></i></span>
+          <span class="tm-orbit tm-orbit-b" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></span>
+          <span class="tm-orbit tm-orbit-c" aria-hidden="true"><i class="fa-solid fa-gem"></i></span>
+
+          <div class="tm-count"><span id="tmCur">01</span><em>/</em><i id="tmTotal">04</i></div>
+
+          <div class="tm-cards" id="tmCards">
+            <figure class="tm-slide is-active" data-tm data-author="Jonathan Reeve" data-role="COO, Northwire">
+              <div class="tm-photo">
+                <img src="images/man-headshot-dark-background.webp" alt="Jonathan Reeve" />
+              </div>
+              <div class="tm-body">
+                <i class="fa-solid fa-quote-left tm-bigq"></i>
+                <blockquote>Stackly absorbed a last-minute venue change like it was routine. Our keynote still started on the second.</blockquote>
+                <figcaption>
+                  <div><strong>Jonathan Reeve</strong><span>COO, Northwire</span></div>
+                </figcaption>
+                <span class="tm-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              </div>
+            </figure>
+
+            <figure class="tm-slide" data-tm data-author="Priya Naidu" data-role="Head of Brand, Aurum">
+              <div class="tm-photo">
+                <img src="images/woman-headshot-white-blazer.webp" alt="Priya Naidu" />
+              </div>
+              <div class="tm-body">
+                <i class="fa-solid fa-quote-left tm-bigq"></i>
+                <blockquote>The gala felt effortless to our guests because every complexity had already been solved backstage.</blockquote>
+                <figcaption>
+                  <div><strong>Priya Naidu</strong><span>Head of Brand, Aurum</span></div>
+                </figcaption>
+                <span class="tm-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              </div>
+            </figure>
+
+            <figure class="tm-slide" data-tm data-author="Elias Thorne" data-role="CMO, Vertex Labs">
+              <div class="tm-photo">
+                <img src="images/man-headshot-navy-suit.webp" alt="Elias Thorne" />
+              </div>
+              <div class="tm-body">
+                <i class="fa-solid fa-quote-left tm-bigq"></i>
+                <blockquote>Fourteen cities, one visual language. The roadshow finally felt like a single campaign, not fifteen events.</blockquote>
+                <figcaption>
+                  <div><strong>Elias Thorne</strong><span>CMO, Vertex Labs</span></div>
+                </figcaption>
+                <span class="tm-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+              </div>
+            </figure>
+
+            <figure class="tm-slide" data-tm data-author="Hannah Voss" data-role="VP Comms, Helix">
+              <div class="tm-photo">
+                <img src="images/woman-headshot-black-blazer.webp" alt="Hannah Voss" />
+              </div>
+              <div class="tm-body">
+                <i class="fa-solid fa-quote-left tm-bigq"></i>
+                <blockquote>Their post-event report changed how our board thinks about experiential spend. That is rare.</blockquote>
+                <figcaption>
+                  <div><strong>Hannah Voss</strong><span>VP Comms, Helix</span></div>
+                </figcaption>
+                <span class="tm-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="tm-nav">
+            <button id="tmPrev" class="tm-btn" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="tm-progress"><span id="tmBar"></span></div>
+            <button id="tmNext" class="tm-btn" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 11 — ENGAGEMENT MODELS ===================== -->
+    <section class="model" id="pricing">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <div class="section-eyebrow eyebrow-center" data-aos="fade-up">
+            <span class="eyebrow-rule"></span>
+            <span>Engagement Models</span>
+          </div>
+          <h2 class="section-title" data-split-words>
+            Flexible ways to <em>work with us</em>
+          </h2>
+        </div>
+
+        <div class="model-strip" data-model>
+          <span class="model-rule" aria-hidden="true"></span>
+
+          <article class="model-col" data-col>
+            <div class="model-bg" style="background-image:url('images/moodboard-flatlay-planning-table.webp')"></div>
+            <span class="model-idx">01</span>
+            <div class="model-inner">
+              <span class="model-tag">Essentials</span>
+              <h3>Essentials</h3>
+              <p>Focused single-room events that need senior oversight without the full production stack.</p>
+              <ul class="model-feats">
+                <li><i class="fa-solid fa-arrow-right"></i> Up to 150 guests</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Venue sourcing &amp; holds</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Run-of-show &amp; comms plan</li>
+              </ul>
+              <div class="model-foot">
+                <div class="model-price"><strong>$4,999</strong><span>from / event</span></div>
+                <a href="HTML/404.html" class="btn btn-ghost">
+                  <span class="btn-label">Choose Essentials</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="model-col model-col-feat" data-col>
+            <div class="model-bg" style="background-image:url('images/opulent-dinner-gathering.webp')"></div>
+            <span class="model-idx">02</span>
+            <div class="model-inner">
+              <span class="model-tag model-tag-chip"><i class="fa-solid fa-star"></i> Flagship &middot; Most chosen</span>
+              <h3>Signature</h3>
+              <p>Our flagship engagement &mdash; full creative, production and hospitality ownership end to end, with a dedicated producer from first brief to final load-out.</p>
+              <ul class="model-feats">
+                <li><i class="fa-solid fa-arrow-right"></i> Up to 600 guests</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Dedicated creative direction</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Custom staging &amp; AV design</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Content capture package</li>
+              </ul>
+              <div class="model-foot">
+                <div class="model-price"><strong>$12,500</strong><span>from / event</span></div>
+                <a href="HTML/404.html" class="btn btn-gold stripes-btn">
+                  <span class="btn-label">Choose Signature</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="model-col" data-col>
+            <div class="model-bg" style="background-image:url('images/executive-signing-document-desk.webp')"></div>
+            <span class="model-idx">03</span>
+            <div class="model-inner">
+              <span class="model-tag">Enterprise</span>
+              <h3>Enterprise</h3>
+              <p>Retained partnerships for global calendars, roadshows and always-on brand experiences.</p>
+              <ul class="model-feats">
+                <li><i class="fa-solid fa-arrow-right"></i> Unlimited event scale</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Global supplier network</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Embedded Stackly team</li>
+              </ul>
+              <div class="model-foot">
+                <div class="model-price"><strong>Custom</strong><span>multi-event programs</span></div>
+                <a href="HTML/404.html" class="btn btn-ghost">
+                  <span class="btn-label">Talk to us</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 12 — FAQ ===================== -->
+    <section class="faq" id="faq">
+      <div class="container faq-grid">
+        <aside class="faq-aside">
+          <div class="section-eyebrow" data-aos="fade-right">
+            <span class="eyebrow-rule"></span>
+            <span>FAQ</span>
+          </div>
+          <h2 class="section-title" data-split-words>
+            Questions, <em>answered</em>
+          </h2>
+          <div class="faq-visual">
+            <img id="faqImg" src="images/moodboard-flatlay-planning-table.webp" alt="FAQ visual" />
+            <span class="faq-img-tag" id="faqImgTag"><i class="fa-solid fa-wand-magic-sparkles"></i> Planning</span>
+          </div>
+          <a href="HTML/404.html" class="btn btn-gold stripes-btn">
+            <span class="btn-label">Ask us anything</span>
+            <i class="fa-solid fa-comment-dots"></i>
+          </a>
+        </aside>
+
+        <div class="faq-list">
+          <div class="faq-item" data-faq data-img="images/moodboard-flatlay-planning-table.webp" data-tag="Planning">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-icon"><span></span><span></span></span>
+              <span class="faq-qt">How far in advance should we book Stackly?</span>
+            </button>
+            <div class="faq-a">
+              <p>For flagship conferences and galas, six to nine months is ideal. We regularly deliver compressed timelines — including full room takeovers in under six weeks — when scope and budget are aligned early.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-faq data-img="images/rooftop-evening-gathering.webp" data-tag="Global delivery">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-icon"><span></span><span></span></span>
+              <span class="faq-qt">Do you work outside your home city?</span>
+            </button>
+            <div class="faq-a">
+              <p>Yes. Stackly has delivered in 40+ cities across five continents. We travel core producers and activate vetted local crew, so quality stays constant while travel costs stay controlled.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-faq data-img="images/corporate-team-meeting.webp" data-tag="Collaboration">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-icon"><span></span><span></span></span>
+              <span class="faq-qt">Can you work alongside our in-house team?</span>
+            </button>
+            <div class="faq-a">
+              <p>Often we do. We slot in as lead producer, creative partner or technical arm depending on your gaps — with clear RACI mapping so responsibilities never blur on show day.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-faq data-img="images/executive-signing-document-desk.webp" data-tag="Transparency">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-icon"><span></span><span></span></span>
+              <span class="faq-qt">How do you handle budgets and transparency?</span>
+            </button>
+            <div class="faq-a">
+              <p>Every engagement opens with a live budget workbook. You see supplier costs, our fees and contingency as separate lines — and nothing gets committed without your sign-off.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-faq data-img="images/audience-celebration-applause.webp" data-tag="Post-event">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-icon"><span></span><span></span></span>
+              <span class="faq-qt">What happens after the event ends?</span>
+            </button>
+            <div class="faq-a">
+              <p>Debrief within five working days, delivered content within two weeks, and a performance report tying attendance, sentiment and media reach back to your original objectives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 13 — CTA ===================== -->
+    <section class="cta" id="contact">
+      <div class="cta-bg">
+        <img src="images/festival-celebration-burst.webp" alt="Celebration burst" />
+      </div>
+      <div class="cta-overlay"></div>
+
+      <div class="container cta-inner">
+        <div class="section-eyebrow eyebrow-light eyebrow-center" data-aos="fade-up">
+          <span class="eyebrow-rule"></span>
+          <span>Let's Build</span>
+        </div>
+
+        <h2 class="cta-title" data-split-words>
+          Ready to stack your next big moment
+        </h2>
+
+        <p class="cta-sub" data-aos="fade-up" data-aos-delay="150">
+          Tell us the date, the ambition and the awkward constraints. We will
+          come back with a route to the room.
+        </p>
+
+        <div class="cta-actions" data-aos="fade-up" data-aos-delay="250">
+          <a href="HTML/404.html" class="btn btn-gold btn-magnetic cta-btn" data-magnetic id="ctaConfetti">
+            <span class="btn-label">Start Planning</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="HTML/404.html" class="cta-phone">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 9764536787</span>
+          </a>
+        </div>
+
+        <div class="cta-mini" data-aos="fade-up" data-aos-delay="350">
+          <div class="cta-mini-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@stackly.com</span>
+          </div>
+          <div class="cta-mini-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== SECTION 14 — FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand" data-footer-col>
+        <a href="index.html" aria-label="Stackly home"><img src="images/logo-full.webp" alt="Stackly" class="footer-logo" /></a>
+        <p>
+          Stackly is a corporate event management studio producing conferences,
+          galas and launches with editorial taste and operational rigor.
+        </p>
+        <div class="footer-socials">
+          <a href="HTML/404.html" class="fsq" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="HTML/404.html" class="fsq" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="HTML/404.html" class="fsq" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="HTML/404.html" class="fsq" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col" data-footer-col>
+        <h4>Company</h4>
+        <a href="index.html" class="flink"><span>Home</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="HTML/services.html" class="flink"><span>Services</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="HTML/events.html" class="flink"><span>Event</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="HTML/about.html" class="flink"><span>About</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="HTML/contact.html" class="flink"><span>Contact</span><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="footer-col footer-contact" data-footer-col>
+        <h4>Contact</h4>
+        <div class="f-contact">
+          <span class="f-contact-line"><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          <span class="f-contact-line"><i class="fa-solid fa-envelope"></i> info@stackly.com</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-news" data-footer-col>
+        <h4>The Brief</h4>
+        <p>Monthly field notes on event craft. No spam, unsubscribe anytime.</p>
+        <form class="news-form" id="newsForm" novalidate>
+          <input type="email" id="newsEmail" placeholder="Work email" aria-label="Email address" />
+          <button type="submit" class="news-btn stripes-btn" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <p class="news-note" id="newsNote"></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container fb-inner">
+        <span>© 2026 Stackly. All rights reserved.</span>
+        <div class="fb-links">
+          <a href="HTML/404.html">Privacy</a>
+          <a href="HTML/404.html">Terms</a>
+          <button class="back-top" id="backTop" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="JS/landing.js"></script>
+
+  <script src="JS/preloader.js"></script>
+</body>
+</html>
