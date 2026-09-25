@@ -1348,7 +1348,7 @@ ul {
 .sv-item:hover .sv-go {
   background: var(--gold);
   color: var(--ink);
-  transform: rotate(45deg);
+  transform: scale(1.08);
 }
 
 .services-preview {

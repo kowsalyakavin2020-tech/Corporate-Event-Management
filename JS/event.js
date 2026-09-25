@@ -890,9 +890,11 @@ if (pxForm) {
   const newsNote = document.getElementById("newsNote");
   let newsTimer = null;
 
-function showNewsNote(msg, isError) {
+  function showNewsNote(msg, isError) {
     if (!newsNote) return;
-    newsNote.innerHTML = String(msg);
+    newsNote.innerHTML = isError
+      ? '<i class="fa-solid fa-circle-exclamation"></i>' + msg
+      : '<i class="fa-solid fa-circle-check"></i> ' + msg;
     newsNote.classList.add("show");
     if (isError) newsNote.classList.add("is-error");
     else newsNote.classList.remove("is-error");
@@ -903,14 +905,28 @@ function showNewsNote(msg, isError) {
   if (newsForm) {
     newsForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const val = newsEmail.value.trim();
-      if (!emailRe.test(val)) {
-        showNewsNote("Please enter a valid work email.", false);
-        gsap.fromTo(newsEmail, { x: -8 }, { x: 0, duration: 0.45, ease: "elastic.out(1, 0.35)", clearProps: "x" });
-} else {
-        window.location.href = "404.html";
+      const value = (newsEmail ? newsEmail.value : "").trim();
+      if (!value) {
+        newsForm.classList.add("is-invalid");
+        showNewsNote("Please enter your work email.", true);
+        if (newsEmail) newsEmail.focus();
+        return;
       }
+      if (!emailRe.test(value)) {
+        newsForm.classList.add("is-invalid");
+        showNewsNote("That doesn&rsquo;t look like a valid email address.", true);
+        if (newsEmail) newsEmail.focus();
+        return;
+      }
+      newsForm.classList.remove("is-invalid");
+      window.location.href = "404.html";
     });
+
+    if (newsEmail) {
+      newsEmail.addEventListener("input", () => {
+        newsForm.classList.remove("is-invalid");
+      });
+    }
   }
 
   /* ===================== RESIZE / VISIBILITY ===================== */

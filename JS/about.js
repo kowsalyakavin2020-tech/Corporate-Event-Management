@@ -534,12 +534,43 @@
   var newsForm = $('#newsForm');
   var newsNote = $('#newsNote');
   if (newsForm && newsNote) {
+    function showNewsNote(msg, isError) {
+      newsNote.innerHTML = isError
+        ? '<i class="fa-solid fa-circle-exclamation"></i>' + msg
+        : '<i class="fa-solid fa-circle-check"></i> ' + msg;
+      newsNote.classList.remove('show');
+      void newsNote.offsetWidth;
+      newsNote.classList.add('show');
+      if (isError) newsNote.classList.add('is-error');
+      else newsNote.classList.remove('is-error');
+      clearTimeout(showNewsNote._t);
+      showNewsNote._t = setTimeout(function () { newsNote.classList.remove('show'); }, 4000);
+    }
     newsForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var email = newsForm.querySelector('input[type="email"]');
-      if (!validateEmail(email.value.trim())) { setNote(newsNote, 'Please enter a work email.', true); email.focus(); return; }
+      var value = (email ? email.value : '').trim();
+      if (!value) {
+        newsForm.classList.add('is-invalid');
+        showNewsNote('Please enter your work email.', true);
+        if (email) email.focus();
+        return;
+      }
+      if (!validateEmail(value)) {
+        newsForm.classList.add('is-invalid');
+        showNewsNote('That doesn&rsquo;t look like a valid email address.', true);
+        if (email) email.focus();
+        return;
+      }
+      newsForm.classList.remove('is-invalid');
       window.location.href = '404.html';
     });
+    var newsEmailInput = newsForm.querySelector('input[type="email"]');
+    if (newsEmailInput) {
+      newsEmailInput.addEventListener('input', function () {
+        newsForm.classList.remove('is-invalid');
+      });
+    }
   }
 
   if (window.AOS) { window.AOS.refresh(); }

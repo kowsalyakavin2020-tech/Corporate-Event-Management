@@ -840,7 +840,9 @@ if (letterNote) {
 
   function showNewsNote(msg, isError) {
     if (!newsNote) return;
-    newsNote.innerHTML = (isError ? '<i class="fa-solid fa-triangle-exclamation"></i>' : '<i class="fa-solid fa-check"></i>') + msg;
+    newsNote.innerHTML = isError
+      ? '<i class="fa-solid fa-circle-exclamation"></i>' + msg
+      : '<i class="fa-solid fa-circle-check"></i> ' + msg;
     newsNote.classList.remove("is-error");
     if (isError) newsNote.classList.add("is-error");
     newsNote.classList.remove("show");
@@ -854,9 +856,15 @@ if (letterNote) {
     newsForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const value = (newsEmail ? newsEmail.value : "").trim();
+      if (!value) {
+        newsForm.classList.add("is-invalid");
+        showNewsNote("Please enter your work email.", true);
+        if (newsEmail) newsEmail.focus();
+        return;
+      }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
         newsForm.classList.add("is-invalid");
-        showNewsNote("That address did not round-trip. Try again?", true);
+        showNewsNote("That doesn&rsquo;t look like a valid email address.", true);
         if (newsEmail) newsEmail.focus();
         return;
       }
